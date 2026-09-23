@@ -14,7 +14,9 @@ public class SplashPanel extends JPanel
 
         this.frame = frame;
 
-        background = new ImageIcon("SplashScreen.png").getImage();
+        background = new ImageIcon(
+            SplashPanel.class.getResource("/images/SplashScreen.png")
+        ).getImage();
 
         setLayout(new BorderLayout());
 

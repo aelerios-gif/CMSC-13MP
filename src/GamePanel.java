@@ -53,7 +53,9 @@ public class GamePanel extends JPanel
         //top
         JPanel topPanel = new JPanel(new BorderLayout());
 
-        questionNumberLabel = new JLabel("Question 1 / 70");
+        questionNumberLabel = new JLabel(
+            "Question 1 / " + questions.size()
+        );
 
         questionNumberLabel.setFont(new Font("Arial", Font.BOLD, 18));
 

@@ -10,13 +10,13 @@ public class QuestionBank {
         // QUESTION 1
 
         questions.add(new Question(
-            "What is 2 + 2?",
+            "Sino pinaka pogi sa buong mundo?",
 
             new String[] {
-                "3",
-                "4",
-                "5",
-                "6"
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
             },
 
             1
@@ -25,13 +25,13 @@ public class QuestionBank {
         // QUESTION 2
 
         questions.add(new Question(
-            "What planet do we live on?",
+            "Sinech?",
 
             new String[] {
-                "Mars",
-                "Venus",
-                "Earth",
-                "Jupiter"
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
             },
 
             2
@@ -40,36 +40,17 @@ public class QuestionBank {
         // QUESTION 3
 
         questions.add(new Question(
-            "What is the capital of the Philippines?",
+            "Okay ka lang po ba?",
 
             new String[] {
-                "Cebu",
-                "Manila",
-                "Davao",
-                "Baguio"
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
             },
 
             1
         ));
-
-        // ==================================================
-        // COPY THIS FORMAT FOR QUESTIONS 4 - 70
-        // ==================================================
-
-        /*
-        questions.add(new Question(
-            "YOUR QUESTION",
-
-            new String[] {
-                "ANSWER A",
-                "ANSWER B",
-                "ANSWER C",
-                "ANSWER D"
-            },
-
-            CORRECT_ANSWER
-        ));
-        */
 
         return questions;
     }
