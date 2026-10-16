@@ -175,9 +175,43 @@ public class GamePanel extends JPanel
 
     public void resetGame() {
 
-        questions = QuestionBank.getQuestions();
+        questions = new ArrayList();
 
-        Collections.shuffle(questions);
+        ArrayList<Question> module1Questions = QuestionBank.getModule1Questions();
+
+        ArrayList<Question> module2Questions = QuestionBank.getModule2Questions();
+
+        ArrayList<Question> module3Questions = QuestionBank.getModule3Questions();
+
+        ArrayList<Question> module4Questions = QuestionBank.getModule4Questions();
+
+        ArrayList<Question> module5Questions = QuestionBank.getModule5Questions();
+
+        ArrayList<Question> module6Questions = QuestionBank.getModule6Questions();
+
+        ArrayList<Question> module7Questions = QuestionBank.getModule7Questions();
+
+        ArrayList<Question> typeAQuestions = QuestionBank.getTypeAQuestions();
+
+        ArrayList<Question> typeBQuestions = QuestionBank.getTypeBQuestions();
+
+        ArrayList<Question> typeCQuestions = QuestionBank.getTypeCQuestions();
+
+        questions.addAll(module1Questions);
+        questions.addAll(module2Questions);
+        questions.addAll(module3Questions);
+        questions.addAll(module4Questions);
+        questions.addAll(module5Questions);
+        questions.addAll(module6Questions);
+        questions.addAll(module7Questions);
+
+        questions.addAll(typeAQuestions);
+        questions.addAll(typeBQuestions);
+        questions.addAll(typeCQuestions);
+
+        /* questions = QuestionBank.getQuestions();
+
+        Collections.shuffle(questions); */
 
         currentQuestion = 0;
 
