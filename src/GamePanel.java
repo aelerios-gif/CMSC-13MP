@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import javax.swing.*;
 
 public class GamePanel extends JPanel 
@@ -33,11 +32,11 @@ public class GamePanel extends JPanel
 
         this.frame = frame;
 
-        questions = QuestionBank.getQuestions();
-
-        createGUI();
+        //questions = QuestionBank.getQuestions();
 
         resetGame();
+
+        createGUI();
     }
 
 
@@ -91,12 +90,9 @@ public class GamePanel extends JPanel
         for (int i = 0; i < 4; i++) 
         {
 
-            answerButtons[i] =
-                new JButton();
+            answerButtons[i] = new JButton();
 
-            answerButtons[i].setFont(
-                new Font("Arial", Font.PLAIN, 18)
-            );
+            answerButtons[i].setFont(new Font("Arial", Font.PLAIN, 18));
 
             final int answerIndex = i;
 
@@ -129,7 +125,7 @@ public class GamePanel extends JPanel
             new JPanel(new FlowLayout());
 
         friendButton =
-            new JButton("📞 CALL A FRIEND");
+            new JButton("CALL A FRIEND");
 
         friendButton.setFont(
             new Font("Arial", Font.BOLD, 16)
@@ -342,12 +338,113 @@ public class GamePanel extends JPanel
 
         currentQuestion++;
 
-        if (currentQuestion >= questions.size()) {
+        //dialog after module 1
+        if(currentQuestion == 10)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "Hmmm just because you finished 10 questions doesn't mean you are really good.\n\n" 
+            + "Let's see if you can withstand PROCEDURAL PROGRAMMING!",
+             "Round 2", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
 
+        //dialog after module 2
+        if(currentQuestion == 20)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Let's see if you can withstand FUNCTIONAL PROGRAMMING!",
+             "Round 3", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after module 3
+        if(currentQuestion == 30)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Let's see if you can withstand OBJECT ORIENTED PROGRAMMING!",
+             "Round 4", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after module 4
+        if(currentQuestion == 40)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Now let's talk about IMPERATIVE VS DECLARATIVE PROGRAMMING!",
+             "Round 5", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after module 5
+        if(currentQuestion == 50)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Let's see if you can withstand EVENT-DRIVEN PROGRAMMING!",
+             "Round 6", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after module 6
+        if(currentQuestion == 60)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Let's see if you can withstand EVENT-DRIVEN PROGRAMMING!",
+             "Round 7", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after module 7
+        if(currentQuestion == 70)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "Let's see if you can withstand PROGRAMMING QUESTIONS!",
+             "Programming A", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after TYPE A
+        if(currentQuestion == 95)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "MORE PROGRAMMING QUESTIONS!!",
+             "Programming B", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after TYPE B
+        if(currentQuestion == 120)
+        {
+            JOptionPane.showMessageDialog(
+                this, 
+                "I mean, you're not bad.\n\n" 
+            + "LAST ROUND!",
+             "Programming C", 
+             JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //dialog after all questions
+        if(currentQuestion >= questions.size())
+        {
             showFinalScore();
 
             return;
         }
+
 
         showQuestion();
     }
