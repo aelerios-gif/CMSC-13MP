@@ -33,10 +33,11 @@ public class GamePanel extends JPanel
         this.frame = frame;
 
         //questions = QuestionBank.getQuestions();
-
-        resetGame();
+        questions = new ArrayList<>();
 
         createGUI();
+
+        resetGame();
     }
 
 
@@ -171,7 +172,7 @@ public class GamePanel extends JPanel
 
     public void resetGame() {
 
-        questions = new ArrayList();
+        questions = new ArrayList<>();
 
         ArrayList<Question> module1Questions = QuestionBank.getModule1Questions();
 

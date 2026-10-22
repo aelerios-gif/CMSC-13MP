@@ -54,6 +54,114 @@ public class QuestionBank
             1
         ));
 
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
         return questions;
     }
 
@@ -95,6 +203,114 @@ public class QuestionBank
         ));
 
         // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
 
         questions.add(new Question(
             "Okay ka lang po ba?",
@@ -167,6 +383,114 @@ public class QuestionBank
             1
         ));
 
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
         return questions;
     }
 
@@ -211,6 +535,114 @@ public class QuestionBank
         ));
 
         // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
 
         questions.add(new Question(
             "Okay ka lang po ba?",
@@ -283,6 +715,114 @@ public class QuestionBank
             1
         ));
 
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
         return questions;
     }
 
@@ -327,6 +867,114 @@ public class QuestionBank
         ));
 
         // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
 
         questions.add(new Question(
             "Okay ka lang po ba?",
@@ -399,6 +1047,114 @@ public class QuestionBank
             1
         ));
 
+
+        // QUESTION 4
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 5
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
         return questions;
     }
 
@@ -410,7 +1166,8 @@ public class QuestionBank
         ArrayList<Question> questions = new ArrayList<>();
 
 
-        //question 1
+        // QUESTION 1
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -424,8 +1181,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 2
 
-        //question 2
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -439,8 +1227,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 5
 
-        //question 3
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -449,6 +1268,284 @@ public class QuestionBank
                 "Allan II",
                 "Lerios, Allan II E.",
                 "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 11
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 12
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 13
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 14
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 15
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 16
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 17
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 18
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 19
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 20
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 21
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 22
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 23
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 24
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 25
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
             },
 
             1
@@ -467,7 +1564,8 @@ public class QuestionBank
         ArrayList<Question> questions = new ArrayList<>();
 
 
-        //question 1
+        // QUESTION 1
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -481,8 +1579,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 2
 
-        //question 2
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -496,8 +1625,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 5
 
-        //question 3
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -506,6 +1666,284 @@ public class QuestionBank
                 "Allan II",
                 "Lerios, Allan II E.",
                 "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 11
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 12
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 13
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 14
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 15
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 16
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 17
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 18
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 19
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 20
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 21
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 22
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 23
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 24
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 25
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
             },
 
             1
@@ -524,7 +1962,8 @@ public class QuestionBank
         ArrayList<Question> questions = new ArrayList<>();
 
 
-        //question 1
+        // QUESTION 1
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -538,8 +1977,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 2
 
-        //question 2
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 3
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 4
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -553,8 +2023,39 @@ public class QuestionBank
             1
         ));
 
+        // QUESTION 5
 
-        //question 3
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 6
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 7
+
         questions.add(new Question(
             "Sino pinaka pogi sa buong mundo?",
 
@@ -563,6 +2064,284 @@ public class QuestionBank
                 "Allan II",
                 "Lerios, Allan II E.",
                 "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 8
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 9
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 10
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 11
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 12
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 13
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 14
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 15
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 16
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 17
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 18
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 19
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 20
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 21
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 22
+
+        questions.add(new Question(
+            "Sino pinaka pogi sa buong mundo?",
+
+            new String[] {
+                "Allan Lerios",
+                "Allan II",
+                "Lerios, Allan II E.",
+                "Allan Eamiguel Lerios"
+            },
+
+            1
+        ));
+
+        // QUESTION 23
+
+        questions.add(new Question(
+            "Sinech?",
+
+            new String[] {
+                "Lalalala",
+                "omsimm",
+                "Eatey",
+                "dingdong"
+            },
+
+            2
+        ));
+
+        // QUESTION 24
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
+            },
+
+            1
+        ));
+
+
+        // QUESTION 25
+
+        questions.add(new Question(
+            "Okay ka lang po ba?",
+
+            new String[] {
+                "GRRR",
+                "DAPAT OKAY PALAGI",
+                "DING DONG",
+                "ERMMM"
             },
 
             1
