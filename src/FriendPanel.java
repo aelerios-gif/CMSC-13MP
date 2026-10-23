@@ -10,7 +10,7 @@ public class FriendPanel extends JDialog
         this.gamePanel = gamePanel;
 
         setTitle("Call a Friend");
-        setSize(350, 300);
+        setSize(650, 300);
         setLocationRelativeTo(gamePanel);
         setModal(true);
         setLayout(new GridLayout(4, 2, 10, 10));
@@ -27,15 +27,15 @@ public class FriendPanel extends JDialog
             new Friend("Double D", QuestionCategory.Procedural),
             new Friend("Jimmy Neutron", QuestionCategory.OOP),
             new Friend("BMO", QuestionCategory.Functional),
-            new Friend("Dexter", QuestionCategory.ImperativeDeclarative),
-            new Friend("Dr. Doofenshmirtz", QuestionCategory.ImperativeDeclarative),
-            new Friend("Nigel Numbuh 1", QuestionCategory.ImperativeDeclarative),
-            new Friend("Morty Smith", QuestionCategory.OOP),
+            new Friend("Dexter", QuestionCategory.Declarative),
+            new Friend("Dr. Doofenshmirtz", QuestionCategory.Imperative),
+            new Friend("Nigel Numbuh 1", QuestionCategory.Imperative, QuestionCategory.Declarative),
+            new Friend("Morty Smith", QuestionCategory.OOP, QuestionCategory.Functional),
         };
 
         for(Friend friend : friends)
         {
-            JButton friendButton = new JButton(friend.getName() + " - " + friend.getSpecialty());
+            JButton friendButton = new JButton(friend.getName() + " - " + java.util.Arrays.toString(friend.getSpecialties()));
 
             friendButton.addActionListener(e -> {
                 this.gamePanel.callFriend(friend);

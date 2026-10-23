@@ -474,19 +474,19 @@ public class GamePanel extends JPanel
         String[] choices = question.getChoices();
 
         //Check whether the friend specializes int his questions category
-        boolean isExpert = friend.getSpecialty() == question.getCategory();
+        boolean isExpert = friend.isExpertIn(question.getCategory());
 
-        //Experts may 75% na magka correct ans
-        //Nonexperts may 25% chance maka correct ans
+        //Experts may 70% na magka correct ans
+        //Nonexperts may 30% chance maka correct ans
         int chanceOfCorrectAnswer;
 
         if(isExpert)
         {
-            chanceOfCorrectAnswer = 75;
+            chanceOfCorrectAnswer = 70;
         }
         else
         {
-            chanceOfCorrectAnswer = 25;
+            chanceOfCorrectAnswer = 30;
         }
 
         int chance = (int) (Math.random() * 100);

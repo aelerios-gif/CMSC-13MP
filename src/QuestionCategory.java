@@ -3,7 +3,8 @@ public enum QuestionCategory
     Procedural,
     Functional,
     OOP,
-    ImperativeDeclarative,
+    Imperative,
+    Declarative,
     EventDriven,
     General
 }

@@ -58,7 +58,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
 
@@ -107,7 +107,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -727,7 +727,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 2
@@ -743,7 +743,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
         // QUESTION 3
@@ -759,7 +759,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
 
@@ -776,7 +776,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 5
@@ -792,7 +792,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
         // QUESTION 6
@@ -808,7 +808,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
 
@@ -825,7 +825,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
         // QUESTION 8
@@ -841,7 +841,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
         // QUESTION 9
@@ -857,7 +857,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Declarative
         ));
 
 
@@ -874,7 +874,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         return questions;

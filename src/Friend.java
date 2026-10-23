@@ -1,12 +1,12 @@
 public class Friend 
 {
     private String name;
-    private QuestionCategory specialty;
+    private QuestionCategory[] specialties;
 
-    public Friend(String name, QuestionCategory specialty) 
+    public Friend(String name, QuestionCategory... specialties) 
     {
         this.name = name;
-        this.specialty = specialty;
+        this.specialties = specialties;
     }
 
     public String getName() 
@@ -14,8 +14,20 @@ public class Friend
         return name;
     }
 
-    public QuestionCategory getSpecialty() 
+    public QuestionCategory[] getSpecialties() 
     {
-        return specialty;
+        return specialties;
+    }
+
+    public boolean isExpertIn(QuestionCategory category)
+    {
+        for(QuestionCategory specialty : specialties)
+        {
+            if(specialty == category)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

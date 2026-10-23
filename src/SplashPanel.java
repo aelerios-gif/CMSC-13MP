@@ -20,27 +20,6 @@ public class SplashPanel extends JPanel
 
         setLayout(new BorderLayout());
 
-        /* JLabel title = new JLabel(
-            "<html><center>" +
-            "Debugged<br>" +
-            "</center></html>"
-        );*/
-
-        //title.setFont(new Font("Arial", Font.BOLD, 45));
-
-        //title.setHorizontalAlignment(
-        //    SwingConstants.CENTER
-        //);
-
-        //JLabel startText = new JLabel("Touch anywhere to hello");
-
-        //startText.setFont(new Font("Arial", Font.PLAIN, 20));
-
-        //startText.setHorizontalAlignment(SwingConstants.CENTER);
-
-        //add(title, BorderLayout.CENTER);
-        //add(startText, BorderLayout.SOUTH);
-
         MouseAdapter listener = new MouseAdapter() {
 
             @Override
