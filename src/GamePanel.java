@@ -122,32 +122,23 @@ public class GamePanel extends JPanel
         // BOTTOM BUTTONS
         // ==========================
 
-        JPanel bottomPanel =
-            new JPanel(new FlowLayout());
+        JPanel bottomPanel = new JPanel(new FlowLayout());
 
-        friendButton =
-            new JButton("CALL A FRIEND");
+        friendButton = new JButton("CALL A FRIEND");
+        friendButton.setFont(new Font("Arial", Font.BOLD, 16));
 
-        friendButton.setFont(
-            new Font("Arial", Font.BOLD, 16)
-        );
-
-        nextButton =
-            new JButton("NEXT QUESTION");
-
-        nextButton.setFont(
-            new Font("Arial", Font.BOLD, 16)
-        );
-
+        nextButton = new JButton("NEXT QUESTION");
+        nextButton.setFont(new Font("Arial", Font.BOLD, 16));
         nextButton.setEnabled(false);
+
+        JButton menuButton = new JButton("MENU");
+        menuButton.setFont(new Font("Arial", Font.BOLD, 16));
 
         bottomPanel.add(friendButton);
         bottomPanel.add(nextButton);
+        bottomPanel.add(menuButton);
 
-        add(
-            bottomPanel,
-            BorderLayout.SOUTH
-        );
+        add(bottomPanel, BorderLayout.SOUTH);
 
         // ==========================
         // BUTTON ACTIONS
@@ -163,6 +154,10 @@ public class GamePanel extends JPanel
 
             nextQuestion();
 
+        });
+
+        menuButton.addActionListener(e -> {
+            showGameMenu();
         });
     }
 
@@ -450,6 +445,72 @@ public class GamePanel extends JPanel
         showQuestion();
     }
 
+    //---------
+    //GAME MENU
+    //------------
+
+    private void showGameMenu()
+    {
+        String[] options = {
+            "Resume Game",
+            "Main Menu",
+            "Exit Program"
+        };
+
+        int choice = JOptionPane.showOptionDialog(
+            this,
+            "What would you like to do?",
+            "Gane Menu",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            options,
+            options[0]
+        );
+
+        //Resume the current game
+        if(choice == 0)
+        {
+            return;
+        }
+
+        //Return to the main menu
+        else if(choice == 1)
+        {
+            int confirm = JOptionPane.showConfirmDialog(
+                this,
+                "Are you sure you want to return to the main menu? " 
+                + "Your current progress may be lost.",
+                "Confirm Main Menu", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+            );
+
+            if(confirm == JOptionPane.YES_OPTION)
+            {
+                frame.returnToHome();
+            }
+        }
+
+        //Exit the program
+        else if(choice == 2)
+        {
+            int confirm = JOptionPane.showConfirmDialog(
+                this,
+                "Are you sure you want to exit the program?",
+                "Confirm Exit",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+            );
+
+            if(confirm == JOptionPane.YES_OPTION)
+            {
+                System.exit(0);
+            }
+        }
+    }
+
+
     // ==========================
     // CALL FRIEND WINDOW
     // ==========================
@@ -520,7 +581,7 @@ public class GamePanel extends JPanel
             + answer
             + "!\"\n\n"
             + "Specialty: "
-            + friend.getSpecialty()
+            + java.util.Arrays.toString(friend.getSpecialties())
             + "\nChance of being correct: "
             + chanceOfCorrectAnswer
             + "%",

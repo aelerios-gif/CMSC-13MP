@@ -1111,7 +1111,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -1226,7 +1226,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Procedural
         ));
 
         return questions;
@@ -1367,7 +1367,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 9
@@ -1531,7 +1531,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 19
@@ -1547,7 +1547,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -1630,7 +1630,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -1954,7 +1954,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 19
@@ -1970,7 +1970,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -1987,7 +1987,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -2004,7 +2004,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -2021,7 +2021,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 23
@@ -2361,7 +2361,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 18
@@ -2377,7 +2377,7 @@ public class QuestionBank
             },
 
             2,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
         // QUESTION 19
@@ -2393,7 +2393,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -2410,7 +2410,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 
@@ -2427,7 +2427,7 @@ public class QuestionBank
             },
 
             1,
-            QuestionCategory.ImperativeDeclarative
+            QuestionCategory.Imperative
         ));
 
 

@@ -10,7 +10,7 @@ public class FriendPanel extends JDialog
         this.gamePanel = gamePanel;
 
         setTitle("Call a Friend");
-        setSize(650, 300);
+        setSize(750, 300);
         setLocationRelativeTo(gamePanel);
         setModal(true);
         setLayout(new GridLayout(4, 2, 10, 10));
