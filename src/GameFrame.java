@@ -58,4 +58,9 @@ public class GameFrame extends JFrame
     {
         showScreen("HOME");
     }
+
+    public void showHome()
+    {
+        cardLayout.show(mainPanel, "HOME");
+    }
 }

@@ -54,6 +54,14 @@ public class SplashPanel extends JPanel
         addMouseListener(listener);
         //title.addMouseListener(listener);
         //startText.addMouseListener(listener);
+
+
+        javax.swing.Timer timer = new javax.swing.Timer(5000, e -> {
+            frame.showHome();
+        });
+
+        timer.setRepeats(false);
+        timer.start();
     }
 
     @Override
