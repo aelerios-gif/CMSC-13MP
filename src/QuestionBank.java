@@ -4,6 +4,10 @@ public class QuestionBank
 {
     //MODULE 1 QUESTIONS 10 questions
 
+
+    //IN MAKING THE QUESTIONS, write the questions in order nalang from A to D 
+    //then yung correct answer is naka index so 0 to 3 from A to D
+
     public static ArrayList<Question> getModule1Questions() 
     {
 
@@ -15,13 +19,14 @@ public class QuestionBank
             "Sino pinaka pogi sa buong mundo?",
 
             new String[] {
-                "Allan Lerios",
-                "Allan II",
-                "Lerios, Allan II E.",
-                "Allan Eamiguel Lerios"
+                "Allan Lerios", //A
+                "Allan II", //B
+                "Lerios, Allan II E.", //C
+                "Allan Eamiguel Lerios" //D
             },
 
-            1
+            1,
+            QuestionCategory.General
         ));
 
         // QUESTION 2
@@ -36,7 +41,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 3
@@ -51,7 +57,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -67,7 +74,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 5
@@ -82,7 +90,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 6
@@ -97,7 +106,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -113,7 +123,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 8
@@ -128,7 +139,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 9
@@ -143,7 +155,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -159,7 +172,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.General
         ));
 
         return questions;
@@ -184,7 +198,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 2
@@ -199,7 +214,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 3
@@ -214,7 +230,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -230,7 +247,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 5
@@ -245,7 +263,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 6
@@ -260,7 +279,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -276,7 +296,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 8
@@ -291,7 +312,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 9
@@ -306,7 +328,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -322,7 +345,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         return questions;
@@ -350,7 +374,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 2
@@ -365,7 +390,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 3
@@ -380,7 +406,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
 
@@ -396,7 +423,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 5
@@ -411,7 +439,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 6
@@ -426,7 +455,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
 
@@ -442,7 +472,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 8
@@ -457,7 +488,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Functional
         ));
 
         // QUESTION 9
@@ -472,7 +504,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
 
@@ -488,7 +521,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
         return questions;
@@ -516,7 +550,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 2
@@ -531,7 +566,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 3
@@ -546,7 +582,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -562,7 +599,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 5
@@ -577,7 +615,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 6
@@ -592,7 +631,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -608,7 +648,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 8
@@ -623,7 +664,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 9
@@ -638,7 +680,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -654,7 +697,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         return questions;
@@ -682,7 +726,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 2
@@ -697,7 +742,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 3
@@ -712,7 +758,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -728,7 +775,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 5
@@ -743,7 +791,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 6
@@ -758,7 +807,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -774,7 +824,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 8
@@ -789,7 +840,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 9
@@ -804,7 +856,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -820,7 +873,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         return questions;
@@ -848,7 +902,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 2
@@ -863,7 +918,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 3
@@ -878,7 +934,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -894,7 +951,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 5
@@ -909,7 +967,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 6
@@ -924,7 +983,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -940,7 +1000,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 8
@@ -955,7 +1016,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 9
@@ -970,7 +1032,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -986,7 +1049,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         return questions;
@@ -1014,7 +1078,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 2
@@ -1029,7 +1094,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 3
@@ -1044,7 +1110,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1060,7 +1127,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 5
@@ -1075,7 +1143,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 6
@@ -1090,7 +1159,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
 
@@ -1106,7 +1176,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 8
@@ -1121,7 +1192,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 9
@@ -1136,7 +1208,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Functional
         ));
 
 
@@ -1152,7 +1225,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         return questions;
@@ -1178,7 +1252,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 2
@@ -1193,7 +1268,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 3
@@ -1208,7 +1284,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -1224,7 +1301,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 5
@@ -1239,7 +1317,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 6
@@ -1254,7 +1333,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1270,7 +1350,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 8
@@ -1285,7 +1366,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 9
@@ -1300,7 +1382,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -1316,7 +1399,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -1332,7 +1416,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 12
@@ -1347,7 +1432,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 13
@@ -1362,7 +1448,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -1378,7 +1465,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 15
@@ -1393,7 +1481,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 16
@@ -1408,7 +1497,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1424,7 +1514,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 18
@@ -1439,7 +1530,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 19
@@ -1454,7 +1546,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1470,7 +1563,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -1486,7 +1580,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -1502,7 +1597,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 23
@@ -1517,7 +1613,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 24
@@ -1532,7 +1629,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1548,7 +1646,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         return questions;
@@ -1576,7 +1675,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 2
@@ -1591,7 +1691,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 3
@@ -1606,7 +1707,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -1622,7 +1724,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 5
@@ -1637,7 +1740,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 6
@@ -1652,7 +1756,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -1668,7 +1773,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 8
@@ -1683,7 +1789,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 9
@@ -1698,7 +1805,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1714,7 +1822,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1730,7 +1839,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 12
@@ -1745,7 +1855,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 13
@@ -1760,7 +1871,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1776,7 +1888,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 15
@@ -1791,7 +1904,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 16
@@ -1806,7 +1920,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -1822,7 +1937,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 18
@@ -1837,7 +1953,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 19
@@ -1852,7 +1969,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1868,7 +1986,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1884,7 +2003,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -1900,7 +2020,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 23
@@ -1915,7 +2036,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 24
@@ -1930,7 +2052,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -1946,7 +2069,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         return questions;
@@ -1974,7 +2098,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 2
@@ -1989,7 +2114,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 3
@@ -2004,7 +2130,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -2020,7 +2147,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 5
@@ -2035,7 +2163,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 6
@@ -2050,7 +2179,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
 
@@ -2066,7 +2196,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 8
@@ -2081,7 +2212,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.Procedural
         ));
 
         // QUESTION 9
@@ -2096,7 +2228,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -2112,7 +2245,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -2128,7 +2262,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 12
@@ -2143,7 +2278,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 13
@@ -2158,7 +2294,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -2174,7 +2311,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 15
@@ -2189,7 +2327,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.OOP
         ));
 
         // QUESTION 16
@@ -2204,7 +2343,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.OOP
         ));
 
 
@@ -2220,7 +2360,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 18
@@ -2235,7 +2376,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.ImperativeDeclarative
         ));
 
         // QUESTION 19
@@ -2250,7 +2392,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -2266,7 +2409,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -2282,7 +2426,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.ImperativeDeclarative
         ));
 
 
@@ -2298,7 +2443,8 @@ public class QuestionBank
                 "Allan Eamiguel Lerios"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 23
@@ -2313,7 +2459,8 @@ public class QuestionBank
                 "dingdong"
             },
 
-            2
+            2,
+            QuestionCategory.EventDriven
         ));
 
         // QUESTION 24
@@ -2328,7 +2475,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
 
@@ -2344,7 +2492,8 @@ public class QuestionBank
                 "ERMMM"
             },
 
-            1
+            1,
+            QuestionCategory.EventDriven
         ));
 
         return questions;

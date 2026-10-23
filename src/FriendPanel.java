@@ -1,80 +1,48 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class FriendPanel extends JDialog 
+public class FriendPanel extends JDialog
 {
-
     private GamePanel gamePanel;
 
-    public FriendPanel(JFrame parent, GamePanel gamePanel) 
+    public FriendPanel(GamePanel gamePanel)
     {
-
-        super(parent, "Call a Friend", true);
-
         this.gamePanel = gamePanel;
 
-        setSize(600, 450);
+        setTitle("Call a Friend");
+        setSize(350, 300);
+        setLocationRelativeTo(gamePanel);
+        setModal(true);
+        setLayout(new GridLayout(4, 2, 10, 10));
 
-        setLocationRelativeTo(parent);
+        JLabel titleLabel = new JLabel("Choose a friend to help you!", SwingConstants.CENTER);
 
-        setLayout(new BorderLayout());
+        add(titleLabel);
 
-        JLabel title = new JLabel("CALL A FRIEND");
+        JButton closeButton = new JButton("Cancel");
+        closeButton.addActionListener(e -> dispose());
+        add(closeButton);
 
-        title.setFont(new Font("Arial", Font.BOLD, 28));
-
-        title.setHorizontalAlignment(SwingConstants.CENTER);
-
-        add(title, BorderLayout.NORTH);
-
-        JPanel friendPanel = new JPanel(new GridLayout(3, 2, 10, 10));
-
-        Friend[] friends = 
-        {
-
-            new Friend("Double D", "Procedural", 90),
-
-            new Friend("Jimmy Neutron", "OOP", 85),
-
-            new Friend("BMO", "Functional", 80),
-
-            new Friend("Dexter", "Declarative", 75),
-
-            new Friend("Dr. Doofenshmirtz", "Imperative", 65),
-
-            new Friend("Nigel Numbuh 1", "Declarative and Imperative", 50),
-
-            new Friend("Morty Smith", "OOP and Functional", 90)
+        Friend[] friends = {
+            new Friend("Double D", QuestionCategory.Procedural),
+            new Friend("Jimmy Neutron", QuestionCategory.OOP),
+            new Friend("BMO", QuestionCategory.Functional),
+            new Friend("Dexter", QuestionCategory.ImperativeDeclarative),
+            new Friend("Dr. Doofenshmirtz", QuestionCategory.ImperativeDeclarative),
+            new Friend("Nigel Numbuh 1", QuestionCategory.ImperativeDeclarative),
+            new Friend("Morty Smith", QuestionCategory.OOP),
         };
 
-        for (Friend friend : friends) 
+        for(Friend friend : friends)
         {
+            JButton friendButton = new JButton(friend.getName() + " - " + friend.getSpecialty());
 
-            JButton button = new JButton(friend.getName() + "\n" + friend.getSpecialty());
-
-            button.setFont(new Font("Arial", Font.BOLD, 16));
-
-            button.addActionListener(e -> {
-
-                gamePanel.callFriend(friend);
-
+            friendButton.addActionListener(e -> {
+                this.gamePanel.callFriend(friend);
                 dispose();
-
             });
 
-            friendPanel.add(button);
+            add(friendButton);
         }
-
-        add(friendPanel, BorderLayout.CENTER);
-
-        JButton cancelButton = new JButton("CANCEL");
-
-        cancelButton.addActionListener(e -> {
-
-            dispose();
-
-        });
-
-        add(cancelButton, BorderLayout.SOUTH);
     }
 }

@@ -456,11 +456,7 @@ public class GamePanel extends JPanel
 
     private void callFriendWindow() {
 
-        FriendPanel friendPanel =
-            new FriendPanel(
-                frame,
-                this
-            );
+        FriendPanel friendPanel =  new FriendPanel(this);
 
         friendPanel.setVisible(true);
     }
@@ -469,68 +465,67 @@ public class GamePanel extends JPanel
     // CALL FRIEND
     // ==========================
 
-    public void callFriend(Friend friend) {
+    public void callFriend(Friend friend)
+    {
+        Question question = questions.get(currentQuestion);
 
-        Question question =
-            questions.get(currentQuestion);
+        int correctAnswer = question.getCorrectAnswer();
 
-        int correctAnswer =
-            question.getCorrectAnswer();
+        String[] choices = question.getChoices();
 
-        String[] choices =
-            question.getChoices();
+        //Check whether the friend specializes int his questions category
+        boolean isExpert = friend.getSpecialty() == question.getCategory();
 
-        /*
-         * For now, the friend gives the
-         * correct answer based on their
-         * reliability.
-         */
+        //Experts may 75% na magka correct ans
+        //Nonexperts may 25% chance maka correct ans
+        int chanceOfCorrectAnswer;
 
-        int chance =
-            (int)(Math.random() * 100);
+        if(isExpert)
+        {
+            chanceOfCorrectAnswer = 75;
+        }
+        else
+        {
+            chanceOfCorrectAnswer = 25;
+        }
+
+        int chance = (int) (Math.random() * 100);
 
         String answer;
 
-        if (chance < friend.getReliability()) {
-
-            answer =
-                (char)('A' + correctAnswer)
-                + ". "
-                + choices[correctAnswer];
-
-        } else {
-
+        if(chance < chanceOfCorrectAnswer)
+        {
+            //The friend gives the correct answer
+            answer = (char) ('A' + correctAnswer) + ". " + choices[correctAnswer];
+        }
+        else
+        {
+            //The friend gives a randomly selected wrong answer
             int wrongAnswer;
 
-            do {
+            do
+            {
+                wrongAnswer = (int) (Math.random() * 4);
+            }
+            while(wrongAnswer == correctAnswer);
 
-                wrongAnswer =
-                    (int)(Math.random() * 4);
-
-            } while (
-                wrongAnswer == correctAnswer
-            );
-
-            answer =
-                (char)('A' + wrongAnswer)
-                + ". "
-                + choices[wrongAnswer];
+            answer = (char) ('A' + wrongAnswer) + ", " + choices[wrongAnswer];
         }
 
         JOptionPane.showMessageDialog(
-            this,
-
+            this, 
             friend.getName()
             + " says:\n\n"
             + "\"I think the answer is "
             + answer
             + "!\"\n\n"
             + "Specialty: "
-            + friend.getSpecialty(),
-
-            "📞 Call with "
-            + friend.getName(),
-
+            + friend.getSpecialty()
+            + "\nChance of being correct: "
+            + chanceOfCorrectAnswer
+            + "%",
+            "Call with " 
+            + friend.getName(), 
             JOptionPane.INFORMATION_MESSAGE
         );
     }

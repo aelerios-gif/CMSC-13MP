@@ -1,14 +1,12 @@
 public class Friend 
 {
     private String name;
-    private String specialty;
-    private int reliability;
+    private QuestionCategory specialty;
 
-    public Friend(String name, String specialty, int reliability) 
+    public Friend(String name, QuestionCategory specialty) 
     {
         this.name = name;
         this.specialty = specialty;
-        this.reliability = reliability;
     }
 
     public String getName() 
@@ -16,13 +14,8 @@ public class Friend
         return name;
     }
 
-    public String getSpecialty() 
+    public QuestionCategory getSpecialty() 
     {
         return specialty;
-    }
-
-    public int getReliability() 
-    {
-        return reliability;
     }
 }
