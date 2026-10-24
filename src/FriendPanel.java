@@ -9,6 +9,8 @@ public class FriendPanel extends JDialog
     {
         this.gamePanel = gamePanel;
 
+        setUndecorated(true);
+
         setTitle("Call a Friend");
         setSize(750, 300);
         setLocationRelativeTo(gamePanel);

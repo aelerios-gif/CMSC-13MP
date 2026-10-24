@@ -18,15 +18,7 @@ public class HomePanel extends JPanel
         gbc.gridx = 0;
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Title
-
-        //JLabel title = new JLabel("ARE YOU SMARTER THAN A 5TH GRADER?");
-
-        //title.setFont(new Font("Arial", Font.BOLD, 30));
-
         gbc.gridy = 0;
-
-        //add(title, gbc);
 
 
         // Play
@@ -79,8 +71,18 @@ public class HomePanel extends JPanel
 
         exitButton.addActionListener(e -> {
 
-            System.exit(0);
+            int choice = JOptionPane.showConfirmDialog(
+                this,
+                "Are you sure you want to exit the game?",
+                "Confirm Exit",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+            );
 
+            if(choice == JOptionPane.YES_OPTION)
+            {
+                System.exit(0);
+            }
         });
     }
 }

@@ -12,6 +12,9 @@ public class GameFrame extends JFrame
     public GameFrame() 
     {
 
+        setUndecorated(true);
+        setResizable(true);
+
         setTitle("Debugged");
         setSize(900, 650);
 
