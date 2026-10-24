@@ -9,6 +9,14 @@ public class GameFrame extends JFrame
 
     private GamePanel gamePanel;
 
+    private boolean fullscreen = false;
+
+    private Rectangle previousBounds;
+
+    private GraphicsDevice graphicsDevice = 
+        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+
+
     public GameFrame() 
     {
 
@@ -65,5 +73,41 @@ public class GameFrame extends JFrame
     public void showHome()
     {
         cardLayout.show(mainPanel, "HOME");
+    }
+
+    public boolean isFullscreen()
+    {
+        return fullscreen;
+    }
+
+    public void setFullscreen(boolean enabled)
+    {
+        if(enabled == fullscreen)
+        {
+            return;
+        }
+
+        if(enabled)
+        {
+            previousBounds = getBounds();
+            dispose();
+
+            setUndecorated(true);
+            setVisible(true);
+
+            graphicsDevice.setFullScreenWindow(this);
+            fullscreen = true;
+        }
+        else
+        {
+            graphicsDevice.setFullScreenWindow(null);
+            dispose();
+
+            setUndecorated(true);
+            setBounds(previousBounds);
+            setVisible(true);
+
+            fullscreen = false;
+        }
     }
 }

@@ -45,6 +45,20 @@ public class HomePanel extends JPanel
         add(tutorialButton, gbc);
 
 
+
+        //Settings
+        JButton settingsButton = new JButton("SETTINGS");
+
+        settingsButton.setPreferredSize(new Dimension(250, 55));
+
+        settingsButton.setFont(new Font("Arial", Font.BOLD, 20));
+
+        gbc.gridy = 3;
+
+        add(settingsButton, gbc);
+
+
+
         // Exit
         JButton exitButton = new JButton("EXIT");
 
@@ -52,23 +66,32 @@ public class HomePanel extends JPanel
 
         exitButton.setFont(new Font("Arial", Font.BOLD, 20));
 
-        gbc.gridy = 3;
+        gbc.gridy = 4;
 
         add(exitButton, gbc);
 
         // Button actions
+        //playButton
         playButton.addActionListener(e -> {
 
             frame.startGame();
 
         });
 
+        //tutorialButton
         tutorialButton.addActionListener(e -> {
 
             frame.showScreen("TUTORIAL");
 
         });
 
+        //settingsButton
+        settingsButton.addActionListener(e -> {
+            SettingsDialog settings = new SettingsDialog(frame);
+            settings.setVisible(true);
+        });
+
+        //exitButton
         exitButton.addActionListener(e -> {
 
             int choice = JOptionPane.showConfirmDialog(

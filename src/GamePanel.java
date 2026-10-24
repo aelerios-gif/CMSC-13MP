@@ -454,6 +454,7 @@ public class GamePanel extends JPanel
         String[] options = {
             "Resume Game",
             "Main Menu",
+            "Settings",
             "Exit Program"
         };
 
@@ -479,9 +480,9 @@ public class GamePanel extends JPanel
         {
             int confirm = JOptionPane.showConfirmDialog(
                 this,
-                "Are you sure you want to return to the main menu? " 
+                "Are you sure you want to return to the main menu? "
                 + "Your current progress may be lost.",
-                "Confirm Main Menu", 
+                "Confirm Main Menu",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.WARNING_MESSAGE
             );
@@ -492,8 +493,15 @@ public class GamePanel extends JPanel
             }
         }
 
-        //Exit the program
+        //Open settings
         else if(choice == 2)
+        {
+            SettingsDialog settings = new SettingsDialog(frame);
+            settings.setVisible(true);
+        }
+
+        //Exit the program
+        else if(choice == 3)
         {
             int confirm = JOptionPane.showConfirmDialog(
                 this,
