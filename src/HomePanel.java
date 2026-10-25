@@ -6,94 +6,93 @@ public class HomePanel extends JPanel
 
     private GameFrame frame;
 
+    private Image backgroundImage;
+
     public HomePanel(GameFrame frame) 
     {
 
         this.frame = frame;
 
-        setLayout(new GridBagLayout());
+        backgroundImage = new ImageIcon("src/images/HomeScreen.png").getImage();
 
-        GridBagConstraints gbc = new GridBagConstraints();
+        setLayout(new BorderLayout());
 
-        gbc.gridx = 0;
-        gbc.insets = new Insets(10, 10, 10, 10);
+        //Buttons panel
+        JPanel buttonPanel = new JPanel();
 
-        gbc.gridy = 0;
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
+        //Make the button panel transparent
+        buttonPanel.setOpaque(false);
 
-        // Play
+        //add space around the buttons
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 20));
+
+        //PLAY button
         JButton playButton = new JButton("PLAY");
 
-        playButton.setPreferredSize(new Dimension(250, 55));
-
-        playButton.setFont(new Font("Arial", Font.BOLD, 20));
-
-        gbc.gridy = 1;
-
-        add(playButton, gbc);
-
-
-        // Tutorial
+        //TUTORIAL button
         JButton tutorialButton = new JButton("TUTORIAL");
 
-        tutorialButton.setPreferredSize(new Dimension(250, 55));
-
-        tutorialButton.setFont(new Font("Arial", Font.BOLD, 20));
-
-        gbc.gridy = 2;
-
-        add(tutorialButton, gbc);
-
-
-
-        //Settings
+        //SETTINGS button
         JButton settingsButton = new JButton("SETTINGS");
 
-        settingsButton.setPreferredSize(new Dimension(250, 55));
-
-        settingsButton.setFont(new Font("Arial", Font.BOLD, 20));
-
-        gbc.gridy = 3;
-
-        add(settingsButton, gbc);
-
-
-
-        // Exit
+        //EXIT BUtton
         JButton exitButton = new JButton("EXIT");
 
-        exitButton.setPreferredSize(new Dimension(250, 55));
+        //Arrange all four buttons
+        JButton[] buttons = {
+            playButton,
+            tutorialButton,
+            settingsButton,
+            exitButton
+        };
 
-        exitButton.setFont(new Font("Arial", Font.BOLD, 20));
+        for(JButton button : buttons)
+        {
+            button.setPreferredSize(new Dimension(250, 55));
+            button.setMinimumSize(new Dimension(250, 55));
+            button.setMaximumSize(new Dimension(250, 55));
 
-        gbc.gridy = 4;
+            button.setFont(new Font("Arial", Font.BOLD, 20));
 
-        add(exitButton, gbc);
+            button.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        // Button actions
-        //playButton
+            buttonPanel.add(button);
+            buttonPanel.add(Box.createVerticalStrut(15));
+        }
+
+        //Place the buttons on the center left side
+        JPanel leftPanel = new JPanel(new GridBagLayout());
+        leftPanel.setOpaque(false);
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.CENTER;
+        gbc.weighty = 1.0;
+
+        leftPanel.add(buttonPanel, gbc);
+
+        add(leftPanel, BorderLayout.WEST);
+
+
+
+        //button actions
         playButton.addActionListener(e -> {
-
             frame.startGame();
-
         });
 
-        //tutorialButton
         tutorialButton.addActionListener(e -> {
-
             frame.showScreen("TUTORIAL");
-
         });
 
-        //settingsButton
         settingsButton.addActionListener(e -> {
             SettingsDialog settings = new SettingsDialog(frame);
             settings.setVisible(true);
         });
 
-        //exitButton
         exitButton.addActionListener(e -> {
-
             int choice = JOptionPane.showConfirmDialog(
                 this,
                 "Are you sure you want to exit the game?",
@@ -107,5 +106,24 @@ public class HomePanel extends JPanel
                 System.exit(0);
             }
         });
+
+    }
+    
+    @Override 
+    protected void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+
+        if(backgroundImage != null)
+        {
+            g.drawImage(
+                backgroundImage,
+                0,
+                0,
+                getWidth(),
+                getHeight(),
+                this
+            );
+        }
     }
 }
