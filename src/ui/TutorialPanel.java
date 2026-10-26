@@ -1,5 +1,9 @@
+package ui;
+
 import java.awt.*;
 import javax.swing.*;
+
+import app.GameFrame;
 
 public class TutorialPanel extends JPanel {
 

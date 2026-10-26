@@ -1,5 +1,9 @@
+package ui;
+
 import java.awt.*;
 import javax.swing.*;
+
+import app.GameFrame;
 
 public class HomePanel extends JPanel 
 {
@@ -13,7 +17,7 @@ public class HomePanel extends JPanel
 
         this.frame = frame;
 
-        backgroundImage = new ImageIcon("src/images/HomeScreen.png").getImage();
+        backgroundImage = new ImageIcon("resources/images/HomeScreen.png").getImage();
 
         setLayout(new BorderLayout());
 
@@ -48,8 +52,7 @@ public class HomePanel extends JPanel
             exitButton
         };
 
-        for(JButton button : buttons)
-        {
+        for (JButton button : buttons) {
             button.setPreferredSize(new Dimension(250, 55));
             button.setMinimumSize(new Dimension(250, 55));
             button.setMaximumSize(new Dimension(250, 55));
@@ -76,8 +79,6 @@ public class HomePanel extends JPanel
 
         add(leftPanel, BorderLayout.WEST);
 
-
-
         //button actions
         playButton.addActionListener(e -> {
             frame.startGame();
@@ -94,35 +95,32 @@ public class HomePanel extends JPanel
 
         exitButton.addActionListener(e -> {
             int choice = JOptionPane.showConfirmDialog(
-                this,
-                "Are you sure you want to exit the game?",
-                "Confirm Exit",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE
+                    this,
+                    "Are you sure you want to exit the game?",
+                    "Confirm Exit",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE
             );
 
-            if(choice == JOptionPane.YES_OPTION)
-            {
+            if (choice == JOptionPane.YES_OPTION) {
                 System.exit(0);
             }
         });
 
     }
-    
-    @Override 
-    protected void paintComponent(Graphics g)
-    {
+
+    @Override
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if(backgroundImage != null)
-        {
+        if (backgroundImage != null) {
             g.drawImage(
-                backgroundImage,
-                0,
-                0,
-                getWidth(),
-                getHeight(),
-                this
+                    backgroundImage,
+                    0,
+                    0,
+                    getWidth(),
+                    getHeight(),
+                    this
             );
         }
     }

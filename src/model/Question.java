@@ -1,3 +1,5 @@
+package model;
+
 public class Question {
 
     private String question;
@@ -6,10 +8,10 @@ public class Question {
     private QuestionCategory category;
 
     public Question(
-        String question,
-        String[] choices,
-        int correctAnswer,
-        QuestionCategory category
+            String question,
+            String[] choices,
+            int correctAnswer,
+            QuestionCategory category
     ) {
 
         this.question = question;
@@ -33,8 +35,7 @@ public class Question {
         return correctAnswer;
     }
 
-    public QuestionCategory getCategory()
-    {
+    public QuestionCategory getCategory() {
         return category;
     }
 }

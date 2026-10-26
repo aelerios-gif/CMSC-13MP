@@ -1,6 +1,13 @@
+package ui;
+
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
+
+import app.GameFrame;
+import data.QuestionBank;
+import model.Friend;
+import model.Question;
 
 public class GamePanel extends JPanel 
 {

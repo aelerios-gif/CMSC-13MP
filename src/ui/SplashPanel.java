@@ -1,7 +1,11 @@
+package ui;
+
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
+
+import app.GameFrame;
 
 public class SplashPanel extends JPanel 
 {
@@ -48,6 +52,9 @@ public class SplashPanel extends JPanel
     {
         super.paintComponent(g);
 
-        g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+        if(background != null)
+        {
+            g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+        }
     }
 }

@@ -1,5 +1,11 @@
+package ui;
+
 import java.awt.*;
 import javax.swing.*;
+
+import app.GameFrame;
+import model.Friend;
+import model.QuestionCategory;
 
 public class FriendPanel extends JDialog
 {

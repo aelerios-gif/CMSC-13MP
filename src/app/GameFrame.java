@@ -1,5 +1,12 @@
+package app;
+
 import java.awt.*;
 import javax.swing.*;
+
+import ui.GamePanel;
+import ui.HomePanel;
+import ui.SplashPanel;
+import ui.TutorialPanel;
 
 public class GameFrame extends JFrame 
 {
