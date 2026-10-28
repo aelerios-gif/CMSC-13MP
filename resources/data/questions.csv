@@ -1,0 +1,146 @@
+id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,category
+1,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,General
+2,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+3,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
+4,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+5,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
+6,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+7,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+8,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+9,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+10,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,General
+11,THEORETICAL,module2,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+12,THEORETICAL,module2,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+13,THEORETICAL,module2,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+14,THEORETICAL,module2,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+15,THEORETICAL,module2,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+16,THEORETICAL,module2,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+17,THEORETICAL,module2,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+18,THEORETICAL,module2,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+19,THEORETICAL,module2,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+20,THEORETICAL,module2,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+21,THEORETICAL,module3,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Functional
+22,THEORETICAL,module3,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
+23,THEORETICAL,module3,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+24,THEORETICAL,module3,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Functional
+25,THEORETICAL,module3,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
+26,THEORETICAL,module3,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+27,THEORETICAL,module3,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Functional
+28,THEORETICAL,module3,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
+29,THEORETICAL,module3,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+30,THEORETICAL,module3,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+31,THEORETICAL,module4,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+32,THEORETICAL,module4,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+33,THEORETICAL,module4,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+34,THEORETICAL,module4,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+35,THEORETICAL,module4,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+36,THEORETICAL,module4,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+37,THEORETICAL,module4,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+38,THEORETICAL,module4,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+39,THEORETICAL,module4,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+40,THEORETICAL,module4,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+41,THEORETICAL,module5,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Imperative
+42,THEORETICAL,module5,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Declarative
+43,THEORETICAL,module5,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
+44,THEORETICAL,module5,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Imperative
+45,THEORETICAL,module5,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Declarative
+46,THEORETICAL,module5,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
+47,THEORETICAL,module5,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Declarative
+48,THEORETICAL,module5,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Declarative
+49,THEORETICAL,module5,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
+50,THEORETICAL,module5,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+51,THEORETICAL,module6,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,EventDriven
+52,THEORETICAL,module6,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
+53,THEORETICAL,module6,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+54,THEORETICAL,module6,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,EventDriven
+55,THEORETICAL,module6,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
+56,THEORETICAL,module6,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+57,THEORETICAL,module6,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,EventDriven
+58,THEORETICAL,module6,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
+59,THEORETICAL,module6,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+60,THEORETICAL,module6,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+61,THEORETICAL,module7,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+62,THEORETICAL,module7,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+63,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+64,THEORETICAL,module7,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+65,THEORETICAL,module7,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+66,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+67,THEORETICAL,module7,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+68,THEORETICAL,module7,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+69,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
+70,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+71,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+72,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+73,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+74,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+75,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+76,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+77,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+78,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Imperative
+79,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+80,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+81,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,EventDriven
+82,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+83,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+84,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+85,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+86,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+87,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+88,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Imperative
+89,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+90,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+91,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+92,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+93,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+94,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+95,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+96,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+97,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+98,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+99,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+100,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+101,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+102,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+103,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+104,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+105,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+106,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+107,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+108,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+109,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+110,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+111,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+112,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+113,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Imperative
+114,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+115,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+116,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+117,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Imperative
+118,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
+119,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+120,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+121,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+122,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+123,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+124,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+125,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+126,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
+127,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+128,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+129,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+130,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+131,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+132,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+133,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+134,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+135,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
+136,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,OOP
+137,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Imperative
+138,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Imperative
+139,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+140,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+141,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
+142,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,EventDriven
+143,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
+144,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
+145,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
