@@ -1,0 +1,13 @@
+UPDATE LOG (for tracking)
+
+Therese<20/28/2026>-cloned repo, added updaate log
+
+Therese<10/28/2026>-Added Code Dump for codes we won't use, just saving it for future references. Will delete some if di na makahelp.
+Modified TutorialPanel.java to show the tutorial image, added this image as well to images folder.
+This caused multi-file errors including GameFrame and HomePanel.
+Fix to this, delete the classes using del *.class and recompiled for reboot.
+
+BUG: 'Pag napipindot yung Settings and Exit in Full screen sa Home Panel, nawawala yung window.
+
+
+
