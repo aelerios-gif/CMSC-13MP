@@ -3,6 +3,7 @@ package ui;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
+import java.util.Collections;
 
 import app.GameFrame;
 import data.QuestionBank;
@@ -196,6 +197,18 @@ public class GamePanel extends JPanel
 
         ArrayList<Question> typeCQuestions = QuestionBank.getTypeCQuestions();
 
+        Collections.shuffle(module1Questions);
+        Collections.shuffle(module2Questions);
+        Collections.shuffle(module3Questions);
+        Collections.shuffle(module4Questions);
+        Collections.shuffle(module5Questions);
+        Collections.shuffle(module6Questions);
+        Collections.shuffle(module7Questions);
+
+        Collections.shuffle(typeAQuestions);
+        Collections.shuffle(typeBQuestions);
+        Collections.shuffle(typeCQuestions);
+
         questions.addAll(module1Questions);
         questions.addAll(module2Questions);
         questions.addAll(module3Questions);
@@ -208,9 +221,10 @@ public class GamePanel extends JPanel
         questions.addAll(typeBQuestions);
         questions.addAll(typeCQuestions);
 
-        /* questions = QuestionBank.getQuestions();
-
-        Collections.shuffle(questions); */
+        for(Question question : questions)
+        {
+            question.shuffleChoices();
+        }
 
         currentQuestion = 0;
 

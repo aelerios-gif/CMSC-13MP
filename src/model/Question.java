@@ -38,4 +38,29 @@ public class Question {
     public QuestionCategory getCategory() {
         return category;
     }
+
+    public void shuffleChoices()
+    {
+        for(int i = choices.length - 1; i > 0; i--)
+        {
+            int j = (int) (Math.random() * (i + 1));
+
+            //Remember the choice currently at index i
+            String temporary = choices[i];
+
+            //Swap the two choices
+            choices[i] = choices[j];
+            choices[j] = temporary;
+
+            //keep the correct-answer index synchronized
+            if(correctAnswer == i)
+            {
+                correctAnswer = j;
+            }
+            else if(correctAnswer == j)
+            {
+                correctAnswer = i;
+            }
+        }
+    }
 }
