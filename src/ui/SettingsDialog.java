@@ -1,9 +1,9 @@
 package ui;
 
+import app.GameFrame;
 import java.awt.*;
 import javax.swing.*;
-
-import app.GameFrame;
+import util.GameFonts;
 
 public class SettingsDialog extends JDialog
 {
@@ -28,7 +28,7 @@ public class SettingsDialog extends JDialog
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
 
         JLabel titleLabel = new JLabel("SETTINGS");
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel.setFont(GameFonts.title());
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         contentPanel.add(titleLabel);

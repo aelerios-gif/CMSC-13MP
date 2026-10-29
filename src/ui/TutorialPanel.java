@@ -1,9 +1,9 @@
 package ui;
 
+import app.GameFrame;
 import java.awt.*;
 import javax.swing.*;
-
-import app.GameFrame;
+import util.GameFonts;
 
 public class TutorialPanel extends JPanel {
 
@@ -22,7 +22,7 @@ public class TutorialPanel extends JPanel {
         setLayout(new BorderLayout());
 
         JButton backButton = new JButton("BACK");
-        backButton.setFont(new Font("Arial", Font.BOLD, 18));
+        backButton.setFont(GameFonts.button());
         backButton.addActionListener(e -> this.frame.showScreen("HOME"));
         add(backButton, BorderLayout.SOUTH);
     }

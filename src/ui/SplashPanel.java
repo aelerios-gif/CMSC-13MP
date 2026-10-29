@@ -1,11 +1,10 @@
 package ui;
 
+import app.GameFrame;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
-
-import app.GameFrame;
 
 public class SplashPanel extends JPanel 
 {
@@ -35,9 +34,6 @@ public class SplashPanel extends JPanel
         };
 
         addMouseListener(listener);
-        //title.addMouseListener(listener);
-        //startText.addMouseListener(listener);
-
 
         javax.swing.Timer timer = new javax.swing.Timer(5000, e -> {
             frame.showHome();

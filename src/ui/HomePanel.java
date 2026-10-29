@@ -1,9 +1,9 @@
 package ui;
 
+import app.GameFrame;
 import java.awt.*;
 import javax.swing.*;
-
-import app.GameFrame;
+import util.GameFonts;
 
 public class HomePanel extends JPanel 
 {
@@ -57,7 +57,7 @@ public class HomePanel extends JPanel
             button.setMinimumSize(new Dimension(250, 55));
             button.setMaximumSize(new Dimension(250, 55));
 
-            button.setFont(new Font("Arial", Font.BOLD, 20));
+            button.setFont(GameFonts.button());
 
             button.setAlignmentX(Component.LEFT_ALIGNMENT);
 

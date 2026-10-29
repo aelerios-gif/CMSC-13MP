@@ -1,14 +1,14 @@
 package ui;
 
-import java.awt.*;
-import java.util.ArrayList;
-import javax.swing.*;
-import java.util.Collections;
-
 import app.GameFrame;
 import data.QuestionBank;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import javax.swing.*;
 import model.Friend;
 import model.Question;
+import util.GameFonts;
 
 public class GamePanel extends JPanel 
 {
@@ -65,11 +65,11 @@ public class GamePanel extends JPanel
             "Question 1 / " + questions.size()
         );
 
-        questionNumberLabel.setFont(new Font("Arial", Font.BOLD, 18));
+        questionNumberLabel.setFont(GameFonts.question());
 
         scoreLabel = new JLabel("Score: 0");
 
-        scoreLabel.setFont(new Font("Arial", Font.BOLD, 18));
+        scoreLabel.setFont(GameFonts.heading());
 
         topPanel.add(questionNumberLabel, BorderLayout.WEST);
 
@@ -82,7 +82,7 @@ public class GamePanel extends JPanel
         //Center
         questionLabel = new JLabel("Question");
 
-        questionLabel.setFont(new Font("Arial", Font.BOLD, 28));
+        questionLabel.setFont(GameFonts.title());
 
         questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -101,7 +101,7 @@ public class GamePanel extends JPanel
 
             answerButtons[i] = new JButton();
 
-            answerButtons[i].setFont(new Font("Arial", Font.PLAIN, 18));
+            answerButtons[i].setFont(GameFonts.button());
 
             final int answerIndex = i;
 
@@ -133,14 +133,14 @@ public class GamePanel extends JPanel
         JPanel bottomPanel = new JPanel(new FlowLayout());
 
         friendButton = new JButton("CALL A FRIEND");
-        friendButton.setFont(new Font("Arial", Font.BOLD, 16));
+        friendButton.setFont(GameFonts.button());
 
         nextButton = new JButton("NEXT QUESTION");
-        nextButton.setFont(new Font("Arial", Font.BOLD, 16));
+        nextButton.setFont(GameFonts.button());
         nextButton.setEnabled(false);
 
         JButton menuButton = new JButton("MENU");
-        menuButton.setFont(new Font("Arial", Font.BOLD, 16));
+        menuButton.setFont(GameFonts.button());
 
         bottomPanel.add(friendButton);
         bottomPanel.add(nextButton);

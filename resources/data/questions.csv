@@ -1,6 +1,13 @@
 id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,category
 1,THEORETICAL,module1,"""What is a programming paradigm?""","""A type of computer hardware""","""An approach or style of programming""","""A computer operating system""","""A programming error""",B,General
-2,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
+2,THEORETICAL,module1,"""#include <stdio.h>\n
+int main() {\n
+int a = 5;\n
+int b = 3;\n
+printf(""""%d"""", a + b * 2);\n
+return 0;\n
+}\n
+""",Lalalala,omsimm,Eatey,dingdong,C,Procedural
 3,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
 4,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
 5,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
@@ -69,13 +76,13 @@ id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,categor
 68,THEORETICAL,module7,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
 69,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
 70,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
-71,PRACTICAL,typea,"""#include <stdio.h>
-int main() {
-int a = 5;
-int b = 3;
-printf(""""%d"""", a + b * 2);
-return 0;
-}
+71,PRACTICAL,typea,"""#include <stdio.h>\n
+int main() {\n
+int a = 5;\n
+int b = 3;\n
+printf(""""%d"""", a + b * 2);\n
+return 0;\n
+}\n
 ""","""11""","""16""","""10""","""8""",A,Procedural
 72,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
 73,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
