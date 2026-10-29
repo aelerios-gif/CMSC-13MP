@@ -1,5 +1,5 @@
 id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,category
-1,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,General
+1,THEORETICAL,module1,"""What is a programming paradigm?""","""A type of computer hardware""","""An approach or style of programming""","""A computer operating system""","""A programming error""",B,General
 2,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
 3,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Declarative
 4,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
@@ -69,7 +69,14 @@ id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,categor
 68,THEORETICAL,module7,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
 69,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Functional
 70,THEORETICAL,module7,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
-71,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+71,PRACTICAL,typea,"""#include <stdio.h>
+int main() {
+int a = 5;
+int b = 3;
+printf(""""%d"""", a + b * 2);
+return 0;
+}
+""","""11""","""16""","""10""","""8""",A,Procedural
 72,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
 73,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
 74,PRACTICAL,typea,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
@@ -94,7 +101,17 @@ id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,categor
 93,PRACTICAL,typea,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,OOP
 94,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
 95,PRACTICAL,typea,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
-96,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+96,PRACTICAL,typeb,"""Which of the following code snippets will produce the output:
+7
+""","""int x = 5;
+printf(""""%d"""", x + 2);
+""","""int x = 5;
+printf(""""%d"""", x + 3);
+""","""int x = 5;
+printf(""""%d"""", x - 2);
+""","""int x = 5;
+printf(""""%d"""", x * 2);
+""",A,Procedural
 97,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
 98,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
 99,PRACTICAL,typeb,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
@@ -119,7 +136,15 @@ id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,categor
 118,PRACTICAL,typeb,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,EventDriven
 119,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
 120,PRACTICAL,typeb,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,EventDriven
-121,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
+121,PRACTICAL,typec,"""What code should replace the blank to produce: 8
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    __________
+    return 0;
+}
+""","""printf(""""%d"""", x + 3);""","""printf(""""%d"""", x + 2);""","""printf(""""%d"""", x * 2);""","""printf(""""%d"""", x - 3);""",A,Procedural
 122,PRACTICAL,typec,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Procedural
 123,PRACTICAL,typec,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Procedural
 124,PRACTICAL,typec,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural
