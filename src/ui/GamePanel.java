@@ -265,11 +265,24 @@ public class GamePanel extends JPanel
             "Score: " + score
         );
 
-        questionLabel.setText(
+        /* questionLabel.setText(
             "<html><center>"
             + question.getQuestion()
             + "</center></html>"
-        );
+        ); */
+
+        String formattedQuestion = question.getQuestion()
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("\n", "<br>");
+
+        questionLabel.setText(
+            "<html><div style='text-align: left;'>"
+            + formattedQuestion
+            + "</div></html>");
+
+
 
         String[] choices =
             question.getChoices();
