@@ -82,7 +82,7 @@ public class GamePanel extends JPanel
         //Center
         questionLabel = new JLabel("Question");
 
-        questionLabel.setFont(GameFonts.title());
+        questionLabel.setFont(GameFonts.question());
 
         questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -265,12 +265,6 @@ public class GamePanel extends JPanel
             "Score: " + score
         );
 
-        /* questionLabel.setText(
-            "<html><center>"
-            + question.getQuestion()
-            + "</center></html>"
-        ); */
-
         String formattedQuestion = question.getQuestion()
         .replace("&", "&amp;")
         .replace("<", "&lt;")
@@ -287,13 +281,23 @@ public class GamePanel extends JPanel
         String[] choices =
             question.getChoices();
 
-        for (int i = 0; i < 4; i++) {
+        for(int i = 0; i < 4; i++)
+        {
+            String formattedChoice = choices[i]
+                .replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("\n", "<br>");
 
             answerButtons[i].setText(
-                (char)('A' + i)
+                "<html><div style='width: 350px; text-align: left;'>"
+                + (char)('A' + i)
                 + ". "
-                + choices[i]
-            );
+                + formattedChoice
+                + "</div></html>"
+            );  
+
+            answerButtons[i].setHorizontalAlignment(SwingConstants.LEFT);
 
             answerButtons[i].setEnabled(true);
         }
