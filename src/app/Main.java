@@ -7,9 +7,9 @@ public class Main
 {
     public static void main(String[] args) 
     {
-        GameFonts.loadFonts();
-
         SwingUtilities.invokeLater(() -> {
+
+            GameFonts.loadFonts();
 
             GameFrame frame = new GameFrame();
 

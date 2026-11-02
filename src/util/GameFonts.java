@@ -8,25 +8,59 @@ import java.io.IOException;
 import java.io.InputStream;
 import javax.swing.UIManager;
 
-public final class GameFonts 
+public final class GameFonts
 {
     private static Font pixelFont;
     private static Font techFont;
 
+    // ==========================
+    // GREEN THEME COLORS
+    // ==========================
+
+    public static final Color BACKGROUND =
+        new Color(7, 19, 11);
+
+    public static final Color PANEL =
+        new Color(18, 61, 32);
+
+    public static final Color BUTTON =
+        new Color(22, 59, 34);
+
+    public static final Color NEON_GREEN =
+        new Color(32, 199, 90);
+
+    public static final Color MINT_GREEN =
+        new Color(155, 255, 176);
+
+    public static final Color TEXT =
+        new Color(232, 245, 233);
+
+
     private GameFonts()
     {
-        //prevent object creation;
+        // Prevent object creation
     }
+
+
+    // ==========================
+    // LOAD FONTS
+    // ==========================
 
     public static void loadFonts()
     {
-        pixelFont = loadFont("/fonts/PressStart2P-Regular.ttf", "resources/fonts/PressStart2P-Regular.ttf");
+        pixelFont = loadFont(
+            "/fonts/PressStart2P-Regular.ttf",
+            "resources/fonts/PressStart2P-Regular.ttf"
+        );
 
-        techFont = loadFont("/fonts/ShareTechMono-Regular.ttf", "resources/fonts/ShareTechMono-Regular.ttf");
+        techFont = loadFont(
+            "/fonts/ShareTechMono-Regular.ttf",
+            "resources/fonts/ShareTechMono-Regular.ttf"
+        );
 
-        //use the readable font as the default Swing font
         installSwingDefaults();
     }
+
 
     private static Font loadFont(String resourcePath, String filePath)
     {
@@ -42,7 +76,7 @@ public final class GameFonts
             System.err.println("Could not load bundled font: " + resourcePath);
         }
 
-        //development fallback: load from the project folder
+        // Development fallback
         try
         {
             File file = new File(filePath);
@@ -62,11 +96,17 @@ public final class GameFonts
         return new Font(Font.MONOSPACED, Font.PLAIN, 14);
     }
 
+
+    // ==========================
+    // SWING DEFAULTS
+    // ==========================
+
     private static void installSwingDefaults()
     {
         Font body = body();
         Font button = button();
 
+        // Fonts
         UIManager.put("Label.font", body);
         UIManager.put("Button.font", button);
         UIManager.put("CheckBox.font", body);
@@ -87,34 +127,44 @@ public final class GameFonts
         UIManager.put("TitledBorder.font", button);
         UIManager.put("ToolTip.font", body);
 
-        Color background = new Color(11, 16, 32);
-        Color foreground = new Color(230, 241, 255);
-        Color cyan = new Color(0, 245, 255);
-        Color purple = new Color(192, 132, 252);
 
-        UIManager.put("Panel.background", background);
-        UIManager.put("OptionPane.background", background);
-        UIManager.put("OptionPane.messageForeground", foreground);
+        // General components
+        UIManager.put("Panel.background", BACKGROUND);
+        UIManager.put("Label.foreground", TEXT);
 
-        UIManager.put("Label.foreground", foreground);
-        UIManager.put("Button.background", new Color(20, 30, 50));
-        UIManager.put("Button.foreground", cyan);
+        // Buttons
+        UIManager.put("Button.background", BUTTON);
+        UIManager.put("Button.foreground", MINT_GREEN);
+        UIManager.put("Button.select", PANEL);
+        UIManager.put("Button.focus", NEON_GREEN);
 
-        UIManager.put("TextField.background", new Color(17, 24, 39));
-        UIManager.put("TextField.foreground", foreground);
-        UIManager.put("TextArea.background", new Color(17, 24, 39));
-        UIManager.put("TextArea.foreground", foreground);
+        // Text fields
+        UIManager.put("TextField.background", PANEL);
+        UIManager.put("TextField.foreground", TEXT);
 
-        UIManager.put("CheckBox.background", background);
-        UIManager.put("CheckBox.foreground", foreground);
-        UIManager.put("RadioButton.background", background);
-        UIManager.put("RadioButton.foreground", foreground);
+        UIManager.put("TextArea.background", PANEL);
+        UIManager.put("TextArea.foreground", TEXT);
 
-        UIManager.put("ComboBox.background", new Color(20, 30, 50));
-        UIManager.put("ComboBox.foreground", foreground);
-        UIManager.put("ToolTip.background", new Color(20, 30, 50));
-        UIManager.put("ToolTip.foreground", cyan);
+        // Checkboxes and radio buttons
+        UIManager.put("CheckBox.background", BACKGROUND);
+        UIManager.put("CheckBox.foreground", TEXT);
+
+        UIManager.put("RadioButton.background", BACKGROUND);
+        UIManager.put("RadioButton.foreground", TEXT);
+
+        // Dialogs
+        UIManager.put("OptionPane.background", BACKGROUND);
+        UIManager.put("OptionPane.messageForeground", TEXT);
+
+        // Tooltips
+        UIManager.put("ToolTip.background", PANEL);
+        UIManager.put("ToolTip.foreground", MINT_GREEN);
     }
+
+
+    // ==========================
+    // FONT METHODS
+    // ==========================
 
     public static Font title()
     {

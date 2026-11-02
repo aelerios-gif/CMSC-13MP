@@ -57,6 +57,9 @@ public class HomePanel extends JPanel
             button.setMinimumSize(new Dimension(250, 55));
             button.setMaximumSize(new Dimension(250, 55));
 
+            button.setBackground(GameFonts.PANEL);
+            button.setForeground(GameFonts.TEXT);
+
             button.setFont(GameFonts.button());
 
             button.setAlignmentX(Component.LEFT_ALIGNMENT);
