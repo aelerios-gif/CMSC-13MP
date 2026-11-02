@@ -1,12 +1,12 @@
 id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,category
 1,THEORETICAL,module1,What is a programming paradigm?,A type of computer hardware,An approach or style of programming,A computer operating system,A programming error,B,General
-2,THEORETICAL,module1,"#include <stdio.h>
-int main() {
-    int a = 5;
-    int b = 3;
-    printf(""""%d"""", a + b * 2);
-    return 0;
-}
+2,THEORETICAL,module1,"    #include <stdio.h>
+    int main() {
+        int a = 5;
+        int b = 3;
+        printf(""%d"", a + b * 2);
+        return 0;
+    }
 ",Lalalala,omsimm,Eatey,dingdong,C,Procedural
 3,THEORETICAL,module1,"What code should replace the blank to produce: 8
 #include <stdio.h>

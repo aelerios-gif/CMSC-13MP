@@ -266,10 +266,12 @@ public class GamePanel extends JPanel
         );
 
         String formattedQuestion = question.getQuestion()
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace("\n", "<br>");
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace(" ", "&nbsp;")
+            .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
+            .replace("\n", "<br>");
 
         questionLabel.setText(
             "<html><div style='text-align: left;'>"
@@ -287,6 +289,8 @@ public class GamePanel extends JPanel
                 .replace("&", "&amp;")
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
+                .replace(" ", "&nbsp;")
+                .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
                 .replace("\n", "<br>");
 
             answerButtons[i].setText(
