@@ -2,7 +2,6 @@ package app;
 
 import java.awt.*;
 import javax.swing.*;
-
 import ui.GamePanel;
 import ui.HomePanel;
 import ui.SplashPanel;
@@ -19,9 +18,6 @@ public class GameFrame extends JFrame
     private boolean fullscreen = false;
 
     private Rectangle previousBounds;
-
-    private GraphicsDevice graphicsDevice = 
-        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 
 
     public GameFrame() 
@@ -96,22 +92,40 @@ public class GameFrame extends JFrame
 
         if(enabled)
         {
+            //save the current window size and position
             previousBounds = getBounds();
-            dispose();
 
+            //get the screen dimensions
+            Rectangle screenBounds = GraphicsEnvironment
+                .getLocalGraphicsEnvironment()
+                .getMaximumWindowBounds();
+
+            //remove window decorations
+            dispose();
             setUndecorated(true);
+
+            //fill the screen without exclusive fullscreen
+            setBounds(
+                GraphicsEnvironment
+                .getLocalGraphicsEnvironment()
+                .getDefaultScreenDevice()
+                .getDefaultConfiguration()
+                .getBounds()
+            );
+
             setVisible(true);
 
-            graphicsDevice.setFullScreenWindow(this);
             fullscreen = true;
         }
         else
         {
-            graphicsDevice.setFullScreenWindow(null);
+            //restore the previos window size and position
             dispose();
 
             setUndecorated(true);
+
             setBounds(previousBounds);
+
             setVisible(true);
 
             fullscreen = false;

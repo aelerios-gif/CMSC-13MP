@@ -15,6 +15,8 @@ public class GamePanel extends JPanel
 
     private GameFrame frame;
 
+    private Image backgroundImage;
+
     private ArrayList<Question> questions;
 
     private int currentQuestion;
@@ -40,7 +42,8 @@ public class GamePanel extends JPanel
 
         this.frame = frame;
 
-        //questions = QuestionBank.getQuestions();
+        backgroundImage = new ImageIcon("resources/images/GameplayBackground.png").getImage();
+
         questions = new ArrayList<>();
 
         createGUI();
@@ -60,6 +63,7 @@ public class GamePanel extends JPanel
 
         //top
         JPanel topPanel = new JPanel(new BorderLayout());
+        topPanel.setOpaque(false);
 
         questionNumberLabel = new JLabel(
             "Question 1 / " + questions.size()
@@ -87,12 +91,14 @@ public class GamePanel extends JPanel
         questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         JPanel centerPanel = new JPanel(new BorderLayout(20, 20));
+        centerPanel.setOpaque(false);
 
         centerPanel.add(questionLabel, BorderLayout.CENTER);
 
 
         //answers
         JPanel answerPanel = new JPanel(new GridLayout(2, 2, 15, 15));
+        answerPanel.setOpaque(false);
 
         answerButtons = new JButton[4];
 
@@ -131,6 +137,7 @@ public class GamePanel extends JPanel
         // ==========================
 
         JPanel bottomPanel = new JPanel(new FlowLayout());
+        bottomPanel.setOpaque(false);
 
         friendButton = new JButton("CALL A FRIEND");
         friendButton.setFont(GameFonts.button());
@@ -168,6 +175,33 @@ public class GamePanel extends JPanel
             showGameMenu();
         });
     }
+
+
+    @Override
+    protected void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+
+        Graphics2D g2d = (Graphics2D) g.create();
+
+        g2d.setRenderingHint(
+            RenderingHints.KEY_INTERPOLATION,
+            RenderingHints.VALUE_INTERPOLATION_BILINEAR
+        );
+
+        g2d.drawImage(
+            backgroundImage,
+            0,
+            0,
+            getWidth(),
+            getHeight(),
+            this
+        );
+
+        g2d.dispose();
+    }
+
+
 
     // ==========================
     // RESET GAME
