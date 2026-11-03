@@ -20,7 +20,26 @@ printf(""%d"", x + 2);","int x = 5;
 printf(""%d"", x + 3);","int x = 5;
 printf(""%d"", x - 2);","int x = 5;
 printf(""%d"", x * 2);",A,Declarative
-4,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,OOP
+4,THEORETICAL,module1,"What code should replace the blank to produce: Woof
+
+class Animal {
+    void sound() {
+        System.out.println(""Sound"");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println(""Woof"");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        __________
+        a.sound();
+    }
+}",Animal a = new Animal();,Dog a = new Animal();,Animal a = new Dog();,Animal.sound();,C,OOP
 5,THEORETICAL,module1,Sinech?,Lalalala,omsimm,Eatey,dingdong,C,Functional
 6,THEORETICAL,module1,Okay ka lang po ba?,GRRR,DAPAT OKAY PALAGI,DING DONG,ERMMM,B,Imperative
 7,THEORETICAL,module1,Sino pinaka pogi sa buong mundo?,Allan Lerios,Allan II,"Lerios, Allan II E.",Allan Eamiguel Lerios,B,Procedural

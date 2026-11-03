@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.*;
 import model.Friend;
+import model.FriendRoster;
 import model.Question;
 import util.GameFonts;
 
@@ -25,7 +26,12 @@ public class GamePanel extends JPanel
     private JLabel questionNumberLabel;
     private JLabel scoreLabel;
 
-    private JLabel questionLabel;
+
+    private JTextArea questionTextArea;
+    private JScrollPane questionScrollPane;
+
+    private JLabel proctorImageLabel;
+    private Friend currentProctor;
 
     private GameButton[] answerButtons;
 
@@ -84,11 +90,35 @@ public class GamePanel extends JPanel
 
 
         //Center
-        questionLabel = new JLabel("Question");
+        questionTextArea = new JTextArea("Question");
 
-        questionLabel.setFont(GameFonts.question());
-        questionLabel.setForeground(GameFonts.TEXT);
-        questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        questionTextArea.setFont(GameFonts.question());
+        questionTextArea.setForeground(GameFonts.TEXT);
+        questionTextArea.setBackground(GameFonts.PANEL);
+
+        questionTextArea.setEditable(false);
+        questionTextArea.setFocusable(false);
+        questionTextArea.setLineWrap(true);
+        questionTextArea.setWrapStyleWord(false);
+
+        questionTextArea.setOpaque(false);
+        questionTextArea.setBorder(
+            BorderFactory.createEmptyBorder(10, 10, 110, 150)
+        );
+
+        questionScrollPane = new JScrollPane(questionTextArea);
+
+        questionScrollPane.setBorder(null);
+        questionScrollPane.setOpaque(false);
+        questionScrollPane.getViewport().setOpaque(false);
+
+        questionScrollPane.setHorizontalScrollBarPolicy(
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER
+        );
+
+        questionScrollPane.setVerticalScrollBarPolicy(
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED
+        );
 
         //Question box
         JPanel questionBox = new JPanel(new BorderLayout())
@@ -132,7 +162,47 @@ public class GamePanel extends JPanel
         //space between the question text and the border
         questionBox.setBorder(BorderFactory.createEmptyBorder(25, 35, 25, 35));
 
-        questionBox.add(questionLabel, BorderLayout.CENTER);
+        //layered pane for the question and proctor portrait
+        JLayeredPane questionLayers = new JLayeredPane();
+
+        questionLayers.setPreferredSize(new Dimension(700, 300));
+
+        //proctor portrait
+        proctorImageLabel = new JLabel();
+        proctorImageLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        proctorImageLabel.setVerticalAlignment(SwingConstants.BOTTOM);
+
+        //add components to separate layers
+        questionLayers.add(questionScrollPane, Integer.valueOf(0));
+        questionLayers.add(proctorImageLabel, Integer.valueOf(1));
+
+        questionBox.add(questionLayers, BorderLayout.CENTER);
+
+
+        questionLayers.addComponentListener(new java.awt.event.ComponentAdapter()
+        {
+            @Override 
+            public void componentResized(java.awt.event.ComponentEvent e)
+            {
+                int width = questionLayers.getWidth();
+                int height = questionLayers.getHeight();
+
+                questionScrollPane.setBounds(
+                    20,
+                    20,
+                    width - 40,
+                    height - 40
+                );
+
+                proctorImageLabel.setBounds(
+                    width - 145,
+                    height - 140,
+                    125,
+                    130
+                );
+            }
+        });
+
 
 
         //Center panel
@@ -334,8 +404,32 @@ public class GamePanel extends JPanel
             return;
         }
 
-        Question question =
-            questions.get(currentQuestion);
+        Question question = questions.get(currentQuestion);
+
+        
+        //determine the proctor from the current section
+        currentProctor = FriendRoster.getProctor(currentQuestion);
+
+        //load and display the proctor image
+        ImageIcon proctorIcon = new ImageIcon(currentProctor.getImagePath());
+
+        if(proctorIcon.getIconWidth() > 0)
+        {
+            Image scaledImage = proctorIcon.getImage().getScaledInstance(
+                125, 130, Image.SCALE_SMOOTH
+            );
+
+            proctorImageLabel.setIcon(new ImageIcon(scaledImage));
+        }
+        else
+        {
+            proctorImageLabel.setIcon(null);
+            System.err.println("Could not load proctor image: " + currentProctor.getImagePath());
+        }
+
+        proctorImageLabel.setToolTipText("Your proctor: " + currentProctor.getName());
+
+
 
         questionNumberLabel.setText(
             "Question "
@@ -348,18 +442,36 @@ public class GamePanel extends JPanel
             "Score: " + score
         );
 
-        String formattedQuestion = question.getQuestion()
+        /* String formattedQuestion = question.getQuestion()
             .replace("&", "&amp;")
             .replace("<", "&lt;")
             .replace(">", "&gt;")
-            .replace(" ", "&nbsp;")
+            //.replace(" ", "&nbsp;")
             .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
-            .replace("\n", "<br>");
+            .replace("\n", "<br>"); */
 
-        questionLabel.setText(
+        String formattedQuestion = question.getQuestion()
+        .replace("\t", "    ");
+
+        questionTextArea.setText(formattedQuestion);
+
+        questionTextArea.setCaretPosition(0);
+
+        //test remove later if it doesnt work
+        //int textWidth = Math.max(100, questionLabel.getWidth() - 40);
+
+        /* questionLabel.setText(
+            "<html><div style='width: " + textWidth + "px; text-align: left;'>"
+            + formattedQuestion
+            + "</div></html>"
+        ); */
+
+
+
+        /* questionLabel.setText(
             "<html><div style='text-align: left;'>"
             + formattedQuestion
-            + "</div></html>");
+            + "</div></html>"); */
 
 
 
@@ -650,7 +762,7 @@ public class GamePanel extends JPanel
 
     private void callFriendWindow() {
 
-        FriendPanel friendPanel =  new FriendPanel(this);
+        FriendPanel friendPanel =  new FriendPanel(this, currentProctor);
 
         friendPanel.setVisible(true);
     }
