@@ -67,7 +67,7 @@ public class SettingsDialog extends JDialog
 
 
         //close button
-        JButton closeButton = new JButton("CLOSE");
+        GameButton closeButton = new GameButton("CLOSE");
         closeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         closeButton.addActionListener(e -> dispose());

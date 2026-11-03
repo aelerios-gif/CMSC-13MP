@@ -2,6 +2,8 @@ package ui;
 
 import app.GameFrame;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.*;
 import util.GameFonts;
 
@@ -33,37 +35,35 @@ public class HomePanel extends JPanel
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 20));
 
         //PLAY button
-        JButton playButton = new JButton("PLAY");
+        GameButton playButton = new GameButton("PLAY");
 
         //TUTORIAL button
-        JButton tutorialButton = new JButton("TUTORIAL");
+        GameButton tutorialButton = new GameButton("TUTORIAL");
 
         //SETTINGS button
-        JButton settingsButton = new JButton("SETTINGS");
+        GameButton settingsButton = new GameButton("SETTINGS");
 
         //EXIT BUtton
-        JButton exitButton = new JButton("EXIT");
+        GameButton exitButton = new GameButton("EXIT");
 
         //Arrange all four buttons
-        JButton[] buttons = {
+        GameButton[] buttons = {
             playButton,
             tutorialButton,
             settingsButton,
             exitButton
         };
 
-        for (JButton button : buttons) {
+        for (GameButton button : buttons) 
+        {
+            //button dimensions
             button.setPreferredSize(new Dimension(250, 55));
             button.setMinimumSize(new Dimension(250, 55));
             button.setMaximumSize(new Dimension(250, 55));
 
-            button.setBackground(GameFonts.PANEL);
-            button.setForeground(GameFonts.TEXT);
-
-            button.setFont(GameFonts.button());
-
             button.setAlignmentX(Component.LEFT_ALIGNMENT);
 
+            //Add button to panel
             buttonPanel.add(button);
             buttonPanel.add(Box.createVerticalStrut(15));
         }

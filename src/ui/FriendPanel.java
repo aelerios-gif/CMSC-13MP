@@ -2,8 +2,6 @@ package ui;
 
 import java.awt.*;
 import javax.swing.*;
-
-import app.GameFrame;
 import model.Friend;
 import model.QuestionCategory;
 
@@ -27,7 +25,7 @@ public class FriendPanel extends JDialog
 
         add(titleLabel);
 
-        JButton closeButton = new JButton("Cancel");
+        GameButton closeButton = new GameButton("Cancel");
         closeButton.addActionListener(e -> dispose());
         add(closeButton);
 
@@ -43,7 +41,7 @@ public class FriendPanel extends JDialog
 
         for(Friend friend : friends)
         {
-            JButton friendButton = new JButton(friend.getName() + " - " + java.util.Arrays.toString(friend.getSpecialties()));
+            GameButton friendButton = new GameButton(friend.getName() + " - " + java.util.Arrays.toString(friend.getSpecialties()));
 
             friendButton.addActionListener(e -> {
                 this.gamePanel.callFriend(friend);

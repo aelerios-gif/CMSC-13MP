@@ -27,11 +27,11 @@ public class GamePanel extends JPanel
 
     private JLabel questionLabel;
 
-    private JButton[] answerButtons;
+    private GameButton[] answerButtons;
 
-    private JButton nextButton;
+    private GameButton nextButton;
 
-    private JButton friendButton;
+    private GameButton friendButton;
 
     private boolean answered;
 
@@ -87,25 +87,71 @@ public class GamePanel extends JPanel
         questionLabel = new JLabel("Question");
 
         questionLabel.setFont(GameFonts.question());
-
+        questionLabel.setForeground(GameFonts.TEXT);
         questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
+        //Question box
+        JPanel questionBox = new JPanel(new BorderLayout())
+        {
+            @Override 
+            protected void paintComponent(Graphics g)
+            {
+                super.paintComponent(g);
+
+                Graphics2D g2d = (Graphics2D) g.create();
+
+                g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                //background
+                g2d.setColor(GameFonts.PANEL);
+
+                g2d.fillRoundRect(
+                    0, 0,
+                    getWidth() - 1,
+                    getHeight() - 1,
+                    20, 20
+                );
+
+                //border
+                g2d.setColor(GameFonts.NEON_GREEN);
+                g2d.setStroke(new BasicStroke(3));
+
+                g2d.drawRoundRect(
+                    1, 1,
+                    getWidth() - 3,
+                    getHeight() - 3,
+                    20, 20
+                );
+
+                g2d.dispose();
+            }
+        };
+
+        questionBox.setOpaque(false);
+
+        //space between the question text and the border
+        questionBox.setBorder(BorderFactory.createEmptyBorder(25, 35, 25, 35));
+
+        questionBox.add(questionLabel, BorderLayout.CENTER);
+
+
+        //Center panel
         JPanel centerPanel = new JPanel(new BorderLayout(20, 20));
         centerPanel.setOpaque(false);
 
-        centerPanel.add(questionLabel, BorderLayout.CENTER);
+        centerPanel.add(questionBox, BorderLayout.CENTER);
 
 
         //answers
         JPanel answerPanel = new JPanel(new GridLayout(2, 2, 15, 15));
         answerPanel.setOpaque(false);
 
-        answerButtons = new JButton[4];
+        answerButtons = new GameButton[4];
 
         for (int i = 0; i < 4; i++) 
         {
 
-            answerButtons[i] = new JButton();
+            answerButtons[i] = new GameButton();
 
             answerButtons[i].setFont(GameFonts.button());
 
@@ -139,15 +185,18 @@ public class GamePanel extends JPanel
         JPanel bottomPanel = new JPanel(new FlowLayout());
         bottomPanel.setOpaque(false);
 
-        friendButton = new JButton("CALL A FRIEND");
+        friendButton = new GameButton("CALL A FRIEND");
         friendButton.setFont(GameFonts.button());
+        friendButton.setPreferredSize(new Dimension(180, 45));
 
-        nextButton = new JButton("NEXT QUESTION");
+        nextButton = new GameButton("NEXT QUESTION");
         nextButton.setFont(GameFonts.button());
+        nextButton.setPreferredSize(new Dimension(200, 45));
         nextButton.setEnabled(false);
 
-        JButton menuButton = new JButton("MENU");
+        GameButton menuButton = new GameButton("MENU");
         menuButton.setFont(GameFonts.button());
+        menuButton.setPreferredSize(new Dimension(120, 45));
 
         bottomPanel.add(friendButton);
         bottomPanel.add(nextButton);
@@ -369,7 +418,7 @@ public class GamePanel extends JPanel
 
         // Disable answers
 
-        for (JButton button : answerButtons) {
+        for (GameButton button : answerButtons) {
 
             button.setEnabled(false);
         }

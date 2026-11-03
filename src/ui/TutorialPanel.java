@@ -21,7 +21,7 @@ public class TutorialPanel extends JPanel {
 
         setLayout(new BorderLayout());
 
-        JButton backButton = new JButton("BACK");
+        GameButton backButton = new GameButton("BACK");
         backButton.setFont(GameFonts.button());
         backButton.addActionListener(e -> this.frame.showScreen("HOME"));
         add(backButton, BorderLayout.SOUTH);
