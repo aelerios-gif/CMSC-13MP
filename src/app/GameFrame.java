@@ -66,6 +66,8 @@ public class GameFrame extends JFrame
         gamePanel.resetGame();
 
         showScreen("GAME");
+
+        gamePanel.showFirstProctorIntro();
     }
 
     public void returnToHome() 

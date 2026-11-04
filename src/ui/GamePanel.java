@@ -99,7 +99,7 @@ public class GamePanel extends JPanel
         questionTextArea.setEditable(false);
         questionTextArea.setFocusable(false);
         questionTextArea.setLineWrap(true);
-        questionTextArea.setWrapStyleWord(false);
+        questionTextArea.setWrapStyleWord(true);
 
         questionTextArea.setOpaque(false);
         questionTextArea.setBorder(
@@ -320,6 +320,15 @@ public class GamePanel extends JPanel
         g2d.dispose();
     }
 
+
+    public void showFirstProctorIntro()
+    {
+        showRoundIntro(
+            "Hey! Welcome to DeBuGGeD!\n"
+            + "Are you ready to test your programming knowledge?",
+            0
+        );
+    }
 
 
     // ==========================
@@ -574,100 +583,90 @@ public class GamePanel extends JPanel
         //dialog after module 1
         if(currentQuestion == 10)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "Hmmm just because you finished 10 questions doesn't mean you are really good.\n\n" 
-            + "Let's see if you can withstand PROCEDURAL PROGRAMMING!",
-             "Round 2", 
-             JOptionPane.INFORMATION_MESSAGE);
+             showRoundIntro(
+                "You made it through the first round!\n" 
+                + "Let's see if you can withstand PROCEDURAL PROGRAMMING!",
+                10
+             );
         }
 
         //dialog after module 2
         if(currentQuestion == 20)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Let's see if you can withstand FUNCTIONAL PROGRAMMING!",
-             "Round 3", 
-             JOptionPane.INFORMATION_MESSAGE);
+             showRoundIntro(
+                "Not bad! But we're just getting started.\n" 
+                + "Let's move on to FUNCTIONAL PROGRAMMING!",
+                20
+             );
         }
 
         //dialog after module 3
         if(currentQuestion == 30)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Let's see if you can withstand OBJECT ORIENTED PROGRAMMING!",
-             "Round 4", 
-             JOptionPane.INFORMATION_MESSAGE);
+             showRoundIntro(
+                "You're doing pretty well!\n" 
+                + "Next up: OBJECT-ORIENTED PROGRAMMING!",
+                30
+             );
         }
 
         //dialog after module 4
         if(currentQuestion == 40)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Now let's talk about IMPERATIVE VS DECLARATIVE PROGRAMMING!",
-             "Round 5", 
-             JOptionPane.INFORMATION_MESSAGE);
+             showRoundIntro(
+                "Ready for another challenge?\n" 
+                + "Let's explore IMPERATIVE AND DECLARATIVE PROGRAMMING!",
+                40
+             );
         }
 
         //dialog after module 5
         if(currentQuestion == 50)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Let's see if you can withstand EVENT-DRIVEN PROGRAMMING!",
-             "Round 6", 
-             JOptionPane.INFORMATION_MESSAGE);
+            showRoundIntro(
+                "Still going strong!\n" 
+                + "Next up: EVENT-DRIVEN PROGRAMMING!",
+                50
+             );
         }
 
         //dialog after module 6
         if(currentQuestion == 60)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Let's see if you can withstand EVENT-DRIVEN PROGRAMMING!",
-             "Round 7", 
-             JOptionPane.INFORMATION_MESSAGE);
+            showRoundIntro(
+                "Almost done with the theoretical questions!\n"
+                + "Let's move on to the final module!",
+                60
+            );
         }
 
         //dialog after module 7
         if(currentQuestion == 70)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "Let's see if you can withstand PROGRAMMING QUESTIONS!",
-             "Programming A", 
-             JOptionPane.INFORMATION_MESSAGE);
+            showRoundIntro(
+                "Enough theory! It's time to put your knowledge into practice!",
+                70
+            );
         }
 
         //dialog after TYPE A
         if(currentQuestion == 95)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "MORE PROGRAMMING QUESTIONS!!",
-             "Programming B", 
-             JOptionPane.INFORMATION_MESSAGE);
+            showRoundIntro(
+                "You're getting closer!\n"
+                + "But there's still more programming to do!",
+                95
+            );
         }
 
         //dialog after TYPE B
         if(currentQuestion == 120)
         {
-            JOptionPane.showMessageDialog(
-                this, 
-                "I mean, you're not bad.\n\n" 
-            + "LAST ROUND!",
-             "Programming C", 
-             JOptionPane.INFORMATION_MESSAGE);
+            showRoundIntro(
+                "This is it!\n"
+                + "Welcome to the LAST ROUND!",
+                120
+            );
         }
 
         //dialog after all questions
@@ -866,5 +865,18 @@ public class GamePanel extends JPanel
         );
 
         frame.returnToHome();
+    }
+
+    private void showRoundIntro(String message, int nextSectionIndex)
+    {
+        Friend nextProctor = FriendRoster.getProctor(nextSectionIndex);
+
+        RoundIntroDialog dialog = new RoundIntroDialog(
+            frame,
+            nextProctor,
+            message
+        );
+
+        dialog.setVisible(true);
     }
 }
