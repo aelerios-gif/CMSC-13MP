@@ -2,17 +2,13 @@ package data;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
 import model.Question;
 import model.QuestionCategory;
 
@@ -110,7 +106,7 @@ public class QuestionCSVReader
             boolean validGroup = 
                 section.equals("THEORETICAL")
                 && group.matches("module[1-7]")
-                || section.equals("PRACTICAL")
+                || section.equals("PROGRAMMING")
                 && group.matches("type[a-c]");
 
             if(!validGroup)
