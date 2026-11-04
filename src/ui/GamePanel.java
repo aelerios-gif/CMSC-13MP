@@ -23,6 +23,11 @@ public class GamePanel extends JPanel
     private int currentQuestion;
     private int score;
 
+    private int lives = 5;
+    private int consecutiveCorrect = 0;
+
+    private JLabel livesLabel;
+
     private JLabel questionNumberLabel;
     private JLabel scoreLabel;
 
@@ -81,8 +86,14 @@ public class GamePanel extends JPanel
 
         scoreLabel.setFont(GameFonts.heading());
 
-        topPanel.add(questionNumberLabel, BorderLayout.WEST);
+        //lives display
+        livesLabel = new JLabel();
+        livesLabel.setFont(GameFonts.heading());
+        updateLivesDisplay();
 
+        //arrange the top panel
+        topPanel.add(questionNumberLabel, BorderLayout.WEST);
+        topPanel.add(livesLabel, BorderLayout.CENTER);
         topPanel.add(scoreLabel, BorderLayout.EAST);
 
         add(topPanel, BorderLayout.NORTH);
@@ -392,6 +403,12 @@ public class GamePanel extends JPanel
 
         score = 0;
 
+        //reset the life system
+        lives = 5;
+        consecutiveCorrect = 0;
+
+        updateLivesDisplay();
+
         answered = false;
 
         showQuestion();
@@ -521,55 +538,127 @@ public class GamePanel extends JPanel
     // CHECK ANSWER
     // ==========================
 
-    private void checkAnswer(
-        int selectedAnswer
-    ) {
+    private void checkAnswer(int selectedAnswer) 
+    {
 
-        if (answered) {
+        if(answered)
+        {
             return;
         }
 
         answered = true;
 
-        Question question =
-            questions.get(currentQuestion);
+        Question question = questions.get(currentQuestion);
 
-        int correctAnswer =
-            question.getCorrectAnswer();
+        int correctAnswer = question.getCorrectAnswer();
 
-        // Disable answers
-
-        for (GameButton button : answerButtons) {
-
+        //disable answer buttons
+        for(GameButton button : answerButtons)
+        {
             button.setEnabled(false);
         }
 
-        if (selectedAnswer == correctAnswer) {
-
+        //check the players answer
+        if(selectedAnswer == correctAnswer)
+        {
             score++;
+            consecutiveCorrect++;
 
-            JOptionPane.showMessageDialog(
-                this,
-                "Correct! 🎉"
-            );
+            //every 5 consecutive correct answers
+            if(consecutiveCorrect == 5)
+            {
+                if(lives < 5)
+                {
+                    lives++;
 
-        } else {
+                    JOptionPane.showMessageDialog(
+                        this,
+                        "INCREDIBLE! 5 CORRECT ANSWERS IN A ROW!\n"
+                        + "You restored one heart! <3"
+                    );
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(
+                        this,
+                        "INCREDIBLE! 5 CORRECT ANSWERS IN A ROW!\n"
+                        + "Your hearts are already full!"
+                    );
+                }
+
+                //start a new streak
+                consecutiveCorrect = 0;
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(
+                    this,
+                    "Correct!"
+                );
+            }
+        }
+        else
+        {
+            //wrong answer costs one heart
+            lives--;
+
+            //reset the consecutive correct answers
+            consecutiveCorrect = 0;
 
             JOptionPane.showMessageDialog(
                 this,
                 "Wrong answer!\n"
                 + "The correct answer was "
                 + (char)('A' + correctAnswer)
+                + "\n\nYou lost one heart! </3"
             );
         }
 
-        scoreLabel.setText(
-            "Score: " + score
-        );
+        //update the displays
+        scoreLabel.setText("Score: " + score);
+
+        updateLivesDisplay();
+
+        //Check if the player has lost all hearts
+        if(lives <= 0)
+        {
+            JOptionPane.showMessageDialog(
+                this,
+                "You have run out of hearts!\n"
+                + "Better luck next time!"
+            );
+
+            showFinalScore();
+
+            return;
+        }
 
         nextButton.setEnabled(true);
 
         friendButton.setEnabled(false);
+    }
+
+    private void updateLivesDisplay()
+    {
+        StringBuilder hearts = new StringBuilder("<html>");
+
+        for(int i = 0; i < 5; i++)
+        {
+            if(i < lives)
+            {
+                hearts.append("<font color='#FF3333' size='8'>♥</font>");
+            }
+            else
+            {
+                hearts.append("<font color='#555555' size='8'>♡</font> ");
+            }
+
+            hearts.append("&nbsp;");
+        }
+
+        hearts.append("</html>");
+
+        livesLabel.setText(hearts.toString());
     }
 
     // ==========================
