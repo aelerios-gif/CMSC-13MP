@@ -6,15 +6,19 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
 
-public class SplashPanel extends JPanel 
+public class SplashPanel extends JPanel
 {
-
     private GameFrame frame;
     private Image background;
 
-    public SplashPanel(GameFrame frame) 
-    {
+    private float opacity = 1.0f;
+    private boolean fadingOut = false;
 
+    private Timer splashTimer;
+    private Timer fadeTimer;
+
+    public SplashPanel(GameFrame frame)
+    {
         this.frame = frame;
 
         background = new ImageIcon(
@@ -23,24 +27,60 @@ public class SplashPanel extends JPanel
 
         setLayout(new BorderLayout());
 
-        MouseAdapter listener = new MouseAdapter() {
+        // Background color visible as the image fades
+        setBackground(new Color(7, 19, 11));
 
+        // Click anywhere to start the fade-out
+        MouseAdapter listener = new MouseAdapter()
+        {
             @Override
-            public void mouseClicked(MouseEvent e) 
+            public void mouseClicked(MouseEvent e)
             {
-
-                frame.showScreen("HOME");
+                startFadeOut();
             }
         };
 
         addMouseListener(listener);
 
-        javax.swing.Timer timer = new javax.swing.Timer(5000, e -> {
-            frame.showHome();
+        // Automatically start fading after 5 seconds
+        splashTimer = new Timer(5000, e -> startFadeOut());
+
+        splashTimer.setRepeats(false);
+        splashTimer.start();
+    }
+
+    private void startFadeOut()
+    {
+        // Prevent multiple fade animations
+        if (fadingOut)
+        {
+            return;
+        }
+
+        fadingOut = true;
+
+        // Stop the automatic timer if the player clicked
+        splashTimer.stop();
+
+        // Gradually decrease image opacity
+        fadeTimer = new Timer(16, e ->
+        {
+            opacity -= 0.02f;
+
+            if (opacity <= 0.0f)
+            {
+                opacity = 0.0f;
+
+                fadeTimer.stop();
+
+                // Show the Home Screen after fading
+                frame.showScreen("HOME");
+            }
+
+            repaint();
         });
 
-        timer.setRepeats(false);
-        timer.start();
+        fadeTimer.start();
     }
 
     @Override
@@ -48,9 +88,26 @@ public class SplashPanel extends JPanel
     {
         super.paintComponent(g);
 
-        if(background != null)
+        if (background != null)
         {
-            g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+            Graphics2D g2d = (Graphics2D) g.create();
+
+            g2d.setComposite(
+                AlphaComposite.getInstance(
+                    AlphaComposite.SRC_OVER,
+                    opacity
+                )
+            );
+
+            g2d.drawImage(
+                background,
+                0, 0,
+                getWidth(),
+                getHeight(),
+                this
+            );
+
+            g2d.dispose();
         }
     }
 }
