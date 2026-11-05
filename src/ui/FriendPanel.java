@@ -28,6 +28,7 @@ public class FriendPanel extends JDialog
         setLocationRelativeTo(gamePanel);
         setLayout(new BorderLayout(10, 10));
 
+        // TITLE
         JLabel titleLabel = new JLabel(
             "CHOOSE A FRIEND TO HELP YOU!",
             SwingConstants.CENTER
@@ -36,8 +37,24 @@ public class FriendPanel extends JDialog
         titleLabel.setFont(util.GameFonts.heading());
         titleLabel.setForeground(util.GameFonts.MINT_GREEN);
 
-        add(titleLabel, BorderLayout.NORTH);
+        // REMAINING CALLS
+        JLabel callsLabel = new JLabel(
+            "FRIEND CALLS LEFT: "
+            + gamePanel.getRemainingFriendCalls(),
+            SwingConstants.CENTER
+        );
 
+        callsLabel.setFont(util.GameFonts.button());
+        callsLabel.setForeground(util.GameFonts.TEXT);
+
+        JPanel headerPanel = new JPanel(new GridLayout(2, 1, 5, 5));
+        headerPanel.setOpaque(false);
+        headerPanel.add(titleLabel);
+        headerPanel.add(callsLabel);
+
+        add(headerPanel, BorderLayout.NORTH);
+
+        // FRIEND BUTTONS
         JPanel friendsPanel = new JPanel(new GridLayout(2, 4, 12, 12));
         friendsPanel.setOpaque(false);
 
@@ -76,10 +93,22 @@ public class FriendPanel extends JDialog
                 currentProctor.getName()
             );
 
+            boolean alreadyCalled = gamePanel.hasCalledFriend(friend);
+
+            // DISABLE UNAVAILABLE FRIENDS
             if(isProctor)
             {
                 friendButton.setEnabled(false);
-                friendButton.setToolTipText("This friend is the current proctor.");
+                friendButton.setToolTipText(
+                    "This friend is the current proctor."
+                );
+            }
+            else if(alreadyCalled)
+            {
+                friendButton.setEnabled(false);
+                friendButton.setToolTipText(
+                    "You have already called this friend this round."
+                );
             }
             else
             {
@@ -92,6 +121,7 @@ public class FriendPanel extends JDialog
             friendsPanel.add(friendButton);
         }
 
+        // CANCEL BUTTON
         GameButton closeButton = new GameButton("CANCEL");
         closeButton.setPreferredSize(new Dimension(150, 45));
         closeButton.addActionListener(e -> dispose());

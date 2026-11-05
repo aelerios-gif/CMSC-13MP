@@ -46,6 +46,11 @@ public class GamePanel extends JPanel
 
     private boolean answered;
 
+    private int friendCallsThisRound = 0;
+    private static final int MAX_FRIEND_CALLS_PER_ROUND = 3;
+
+    private ArrayList<Friend> calledFriendsThisRound = new ArrayList<>();
+
 
 
     public GamePanel(GameFrame frame) 
@@ -672,6 +677,8 @@ public class GamePanel extends JPanel
         //dialog after module 1
         if(currentQuestion == 10)
         {
+            resetFriendCalls();
+
              showRoundIntro(
                 "You made it through the first round!\n" 
                 + "Let's see if you can withstand PROCEDURAL PROGRAMMING!",
@@ -682,6 +689,8 @@ public class GamePanel extends JPanel
         //dialog after module 2
         if(currentQuestion == 20)
         {
+            resetFriendCalls();
+
              showRoundIntro(
                 "Not bad! But we're just getting started.\n" 
                 + "Let's move on to FUNCTIONAL PROGRAMMING!",
@@ -692,6 +701,8 @@ public class GamePanel extends JPanel
         //dialog after module 3
         if(currentQuestion == 30)
         {
+            resetFriendCalls();
+
              showRoundIntro(
                 "You're doing pretty well!\n" 
                 + "Next up: OBJECT-ORIENTED PROGRAMMING!",
@@ -702,6 +713,8 @@ public class GamePanel extends JPanel
         //dialog after module 4
         if(currentQuestion == 40)
         {
+            resetFriendCalls();
+
              showRoundIntro(
                 "Ready for another challenge?\n" 
                 + "Let's explore IMPERATIVE AND DECLARATIVE PROGRAMMING!",
@@ -712,6 +725,8 @@ public class GamePanel extends JPanel
         //dialog after module 5
         if(currentQuestion == 50)
         {
+            resetFriendCalls();
+
             showRoundIntro(
                 "Still going strong!\n" 
                 + "Next up: EVENT-DRIVEN PROGRAMMING!",
@@ -722,6 +737,8 @@ public class GamePanel extends JPanel
         //dialog after module 6
         if(currentQuestion == 60)
         {
+            resetFriendCalls();
+
             showRoundIntro(
                 "Almost done with the theoretical questions!\n"
                 + "Let's move on to the final module!",
@@ -732,6 +749,8 @@ public class GamePanel extends JPanel
         //dialog after module 7
         if(currentQuestion == 70)
         {
+            resetFriendCalls();
+
             showRoundIntro(
                 "Enough theory! It's time to put your knowledge into practice!",
                 70
@@ -741,6 +760,8 @@ public class GamePanel extends JPanel
         //dialog after TYPE A
         if(currentQuestion == 95)
         {
+            resetFriendCalls();
+
             showRoundIntro(
                 "You're getting closer!\n"
                 + "But there's still more programming to do!",
@@ -751,6 +772,8 @@ public class GamePanel extends JPanel
         //dialog after TYPE B
         if(currentQuestion == 120)
         {
+            resetFriendCalls();
+
             showRoundIntro(
                 "This is it!\n"
                 + "Welcome to the LAST ROUND!",
@@ -848,7 +871,20 @@ public class GamePanel extends JPanel
     // CALL FRIEND WINDOW
     // ==========================
 
-    private void callFriendWindow() {
+    private void callFriendWindow() 
+    {
+        if(friendCallsThisRound >= MAX_FRIEND_CALLS_PER_ROUND)
+        {
+            JOptionPane.showMessageDialog(
+                this,
+                "You have already used all 3 friend calls this round!",
+                "Friend Calls Unavailable",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+
+            return;
+        }
+
 
         FriendPanel friendPanel =  new FriendPanel(this, currentProctor);
 
@@ -869,6 +905,25 @@ public class GamePanel extends JPanel
 
         //Check whether the friend specializes int his questions category
         boolean isExpert = friend.isExpertIn(question.getCategory());
+
+
+        if(calledFriendsThisRound.contains(friend))
+        {
+            JOptionPane.showMessageDialog(
+                this,
+                friend.getName() + " has already helped you this round!",
+                "Friend Already Called",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+
+            return;
+        }
+
+        //record this friend call
+        calledFriendsThisRound.add(friend);
+        friendCallsThisRound++;
+
+
 
         //Experts may 70% na magka correct ans
         //Nonexperts may 30% chance maka correct ans
@@ -967,5 +1022,21 @@ public class GamePanel extends JPanel
         );
 
         dialog.setVisible(true);
+    }
+
+    private void resetFriendCalls()
+    {
+        friendCallsThisRound = 0;
+        calledFriendsThisRound.clear();
+    }
+
+    public int getRemainingFriendCalls()
+    {
+        return MAX_FRIEND_CALLS_PER_ROUND - friendCallsThisRound;
+    }
+
+    public boolean hasCalledFriend(Friend friend)
+    {
+        return calledFriendsThisRound.contains(friend);
     }
 }
