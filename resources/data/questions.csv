@@ -1,0 +1,537 @@
+id,section,module,question,choiceA,choiceB,choiceC,choiceD,correctAnswer,category
+1,THEORETICAL,module1,What is a programming paradigm?,A type of computer hardware,An approach or style of programming,A computer operating system,A programming error,B,General
+2,THEORETICAL,module1,Which programming paradigm organizes programs into procedures or functions?,Procedural programming,Declarative programming,Functional programming,Object-oriented programming,A,Procedural
+3,THEORETICAL,module1,Which programming paradigm focuses on describing what result is desired rather than specifying every step to achieve it?,Imperative programming,Procedural programming,Declarative programming,Object-oriented programming,C,Declarative
+4,THEORETICAL,module1,Which programming paradigm organizes programs around objects that contain data and behavior?,Functional programming,Object-oriented programming,Imperative programming,Declarative programming,B,OOP
+5,THEORETICAL,module1,Which programming paradigm emphasizes the use of functions and avoids changing data whenever possible?,Procedural programming,Imperative programming,Object-oriented programming,Functional programming,D,Functional
+6,THEORETICAL,module1,Which programming paradigm focuses on giving the computer step-by-step instructions on how to perform a task?,Declarative programming,Imperative programming,Functional programming,Object-oriented programming,B,Imperative
+7,THEORETICAL,module1,"In procedural programming, what is a procedure?",A named set of instructions that performs a task,A computer component,A type of database,A programming language error,A,Procedural
+8,THEORETICAL,module1,"In object-oriented programming, what is a class?",A type of loop,A blueprint for creating objects,A mathematical formula,A command that stops a program,B,OOP
+9,THEORETICAL,module1,Which OOP concept allows a class to acquire properties and behaviors from another class?,Inheritance,Encapsulation,Recursion,Sequencing,A,OOP
+10,THEORETICAL,module1,Which statement about programming paradigms is TRUE?,Every programming language supports only one paradigm.,Programming paradigms are different approaches to writing programs.,Functional programming never uses functions.,OOP does not use data.,B,General
+11,THEORETICAL,module2,Procedural Programming is primarily built around which programming paradigm?,Declarative specifications,Pure mathematical functions,Sequence of imperative statements/routines,Objects containing state and behavior,C,Procedural
+12,THEORETICAL,module2,"In procedural programming, how is program state typically managed and shared across subroutines?",Via immutable data structures,Via global and local variables,Via passing messages between independent objects,Via monadic state transformers,B,Procedural
+13,THEORETICAL,module2,What term describes a block of code within a procedural program that performs a specific task and can be re-used by calling its name?,Class,Lambda expression,Procedure or Function,Interface and Subroutine,C,Procedural
+14,THEORETICAL,module2,Which of the following is a key characteristic of top-down design in procedural programming?,Breaking a complex problem down into smaller sub-problems/routines,Combining state and behavior into encapsulated units,Defining objects and their interactions before functions,Writing evaluation logic without controlling execution flow,A,Procedural
+15,THEORETICAL,module2,What happens to local variables declared inside a standard procedural function when the function finishes executing?,They persist in memory for the lifetime of the program,They automatically become global variables,They are deallocated from the call stack,They are copied into persistent heap storage,C,Procedural
+16,THEORETICAL,module2,"Which execution structure is used to manage function calls, local variables, and return addresses during procedural execution?",Call Stack,Heap,Queue,Hash Table,A,Procedural
+17,THEORETICAL,module2,Modifying a variable outside a procedure's local scope during its execution is known as a...,Return value,Parameter pass,Side effect,Stack overflow,C,Procedural
+18,THEORETICAL,module2,Which programming language is widely considered a classic example of a procedural programming language?,C,Smalltalk,Haskell,Prolog,A,Procedural
+19,THEORETICAL,module2,"Passing a parameter ""by reference"" means that...",A copy of the argument's value is passed into the function,"The memory address of the argument is passed, allowing direct modification of the original variable",The argument is evaluated lazily only when accessed,The argument is restricted to read-only access within the routine,B,Procedural
+20,THEORETICAL,module2,What is a primary drawback of relying heavily on global state in large procedural programs?,Code becomes harder to debug and reason about due to unintended side effects,It prevents functions from accepting parameters,It significantly reduces memory usage,It forces all variables to be immutable,A,Procedural
+21,THEORETICAL,module3,What is a characteristic of Functional Programming?,Consistency is maintained,Asks questions on whether or not something is true,Answers how to solve a problem,Does not include recursion,A,Functional
+22,THEORETICAL,module3,These are the variables that cannot be changed directly:,Immutable Variables,Primitive data types variables,Functions,Structs,A,Functional
+23,THEORETICAL,module3,"Lambda Calculus has no built-in numbers or operations, which means...",There are no numerical inputs,"There are no common booleans, loops, and data types",There are loops for operations,There is no computation,B,Functional
+24,THEORETICAL,module3,Which is not a feature of Functional Programming?,It is exclusively declarative in all implementations,Has recursion,Has immutable variables,Avoids data mutation,A,Functional
+25,THEORETICAL,module3,A Pure Function takes inputs and...,Does other operations based on the input,Calculates results and does nothing else to the data,Changes the outputs,Does nothing,B,Functional
+26,THEORETICAL,module3,"For every output in B, there is some A for it, this function is classified as...",Not a function,Injection,Bijection,Surjection,D,Functional
+27,THEORETICAL,module3,What's a feature of Lambda Calculus?,Single-input functions,Has side effects,Has built-in support for numbers,Has built-in support for strings,A,Functional
+28,THEORETICAL,module3,"In Lambda Calculus, what primary operation corresponds to function application (substituting an argument into a function body)?",Alpha-conversion,Beta-reduction,Eta-conversion,Recursion,B,Functional
+29,THEORETICAL,module3,The technique of transforming a multi-argument function into a sequence of nested single-argument functions is known as...,Memoization,Lazy evaluation,Currying,Pattern matching,C,Functional
+30,THEORETICAL,module3,What property guarantees that an expression can be replaced with its evaluated value without changing the behavior of the program?,Referential transparency,Tail call optimization,First-class status,Dynamic binding,A,Functional
+31,THEORETICAL,module4,"In the 4 pillars of OOP, what refers to the hiding of unnecessary implementation details and showing only the necessary features that the user needs?",Inheritance,Encapsulation,Abstraction,Polymorphism,C,OOP
+32,THEORETICAL,module4,What is method overloading?,Defining multiple methods with the same name but different parameter lists,Replacing a superclass method,Hiding all methods in a class,Creating multiple classes with the same name,A,OOP
+33,THEORETICAL,module4,What is the primary purpose of Object-Oriented programming (OOP)?,To eliminate the use of variables,To organize programs around objects and their behavior,To make programs run without algorithms,To avoid using functions,B,OOP
+34,THEORETICAL,module4,Which statement best describes polymorphism?,One class can only have one object,An object can never change its behavior,The same interface or method call can represent different behaviors,All classes must inherit from another class,C,OOP
+35,THEORETICAL,module4,Which of the following best describes an object?,A blueprint for creating classes,A variable that can only store integers/floats/doubles,An instance of a class,A method inside a class,C,OOP
+36,THEORETICAL,module4,What is method overriding?,Creating multiple methods with the same name but different parameters,Redefining an inherited method in a subclass,Making a method private,Calling a constructor from another constructor,B,OOP
+37,THEORETICAL,module4,"In the 4 pillars of OOP, which allows the same method call to behave differently depending on the object?",Encapsulation,Polymorphism,Inheritance,Compilation,B,OOP
+38,THEORETICAL,module4,What does inheritance allow a class to do?,Hide all of its data,Acquire properties and behaviors from another class,Prevent objects from being created,Convert a class into a primitive data type,B,OOP
+39,THEORETICAL,module4,Which statement about constructors is true?,A constructor must have a return type,A constructor must always be public,A constructor has the same name as its class,A constructor can only contain one statement,C,OOP
+40,THEORETICAL,module4,What is the purpose of a constructor?,To destroy an object,To initialize an object when it is created,To prevent inheritance,To return a value from a method,B,OOP
+41,THEORETICAL,module5,"Which programming paradigm emphasizes the use of mutable state and explicit control flow structures like for, while, and if-else?",Declarative programming,Imperative programming,Logic programming,Functional programming,B,Imperative
+42,THEORETICAL,module5,"When using HTML or CSS to design a webpage, what programming paradigm are you primarily utilizing?",Imperative,Procedural,Declarative,Object-Oriented,C,Declarative
+43,THEORETICAL,module5,Which of the following best describes the execution model of declarative code?,The programmer writes explicit step-by-step instructions for every CPU operation.,The runtime or engine determines the most efficient execution path to reach the specified goal.,Every variable must be reassigned at least three times during execution.,Control flow must be managed manually via goto statements.,B,Declarative
+44,THEORETICAL,module5,Which one is written in an imperative style?,SELECT * FROM employees WHERE department = 'IT';,let doubled = numbers.map(n => n * 2);,let results = []; for(let i=0; i<arr.length; i++) { results.push(arr[i] * 2); },"<Button color=""blue""/>",C,Imperative
+45,THEORETICAL,module5,How do declarative languages typically handle state management compared to imperative languages?,"Declarative languages rely heavily on global mutable state, while imperative languages forbid it.",Declarative languages minimize or eliminate explicit state mutation in favor of expressions and immutability.,Declarative languages require manual memory deallocation for all state variables.,There is no difference in how state is handled between the two paradigms.,B,Declarative
+46,THEORETICAL,module5,"Which of the following paradigms is a major sub-category of declarative programming, where programs are constructed by stating facts and rules?",Procedural programming,"Logic programming (e.g., Prolog)",Assembly programming,Structured imperative programming,B,Declarative
+47,THEORETICAL,module5,What is a key reason why declarative code is often easier to parallelize or run concurrently?,Because it enforces strict step-by-step sequential execution order.,Because the absence of side effects and shared mutable state reduces race conditions.,Because it requires every thread to share the same mutable accumulator variable.,Because it restricts programs to running on a single CPU core.,B,Declarative
+48,THEORETICAL,module5,Which paradigm does regular expression matching (regex) fall under?,"Imperative, because you write loops to check every character.","Declarative, because you define a pattern describing what text to match rather than writing the matching algorithm.","Procedural, because it uses subroutines.","Object-oriented, because patterns are encapsulated as classes.",B,Declarative
+49,THEORETICAL,module5,"In an imperative approach to sorting an array, a programmer might write a Bubble Sort algorithm. In a declarative approach, what would they likely write instead?",sort(array) — stating the desired outcome and letting the language runtime handle the sorting algorithm.,Manual pointer arithmetic to swap memory addresses.,A nested loop with explicit swap counters.,A custom stack frame allocator.,A,Declarative
+50,THEORETICAL,module5,Which of the following is considered an imperative language feature?,Higher-order functions like filter and reduce,Assignment operator (=) modifying an existing variable's value,Pattern matching in data structures,Query expressions that fetch data,B,Imperative
+51,THEORETICAL,module6,What is the primary characteristic that defines an event-driven programming paradigm?,Execution follows a strict top-to-bottom sequential flow with zero user interaction.,"Program flow is determined by external occurrences or triggers, such as user actions, messages, or hardware signals.",Code relies exclusively on global mutable state and goto statements.,Data is evaluated lazily only when explicitly requested by a compiler optimizer.,B,EventDriven
+52,THEORETICAL,module6,"In an event-driven architecture, what term is used for a function or method that is automatically executed when a specific event occurs?",Constructor function,Event handler or callback,Destructor,Abstract base class,B,EventDriven
+53,THEORETICAL,module6,What is the role of an Event Loop in runtimes like web browsers or Node.js?,It executes all lines of code in a single infinite loop without ever pausing.,It continuously monitors the event queue and dispatches queued callback functions for execution when the call stack is clear.,It manages the CPU hardware cache and register allocation.,It enforces strict procedural sequential execution by blocking all asynchronous tasks.,B,EventDriven
+54,THEORETICAL,module6,"Which design pattern is most commonly foundational to event-driven programming, where an object (the subject) maintains a list of dependents (observers) and notifies them of state changes?",Singleton Pattern,Observer / Publish-Subscribe Pattern,Factory Pattern,Adapter Pattern,B,EventDriven
+55,THEORETICAL,module6,What is a major performance benefit of using an event-driven model for I/O-bound operations (like reading files or handling network requests)?,It uses blocking synchronous calls that guarantee zero CPU usage.,"It allows non-blocking execution, meaning the program can handle other tasks while waiting for I/O operations to complete.",It forces multi-threaded parallel execution across thousands of physical CPU cores.,It eliminates the need for any memory allocation.,B,EventDriven
+56,THEORETICAL,module6,"In JavaScript DOM event handling, what object is typically passed into an event listener callback, providing details like mouse coordinates or the target element?",The Global Window Object,The Event Object,The DOM Compiler,The Stack Trace Object,B,EventDriven
+57,THEORETICAL,module6,"In Node.js, which built-in class is commonly used to build custom event-driven systems utilizing .on() to listen for events and .emit() to trigger them?",EventEmitter,StreamProcessor,BufferPool,ConsoleListener,A,EventDriven
+58,THEORETICAL,module6,"What does ""Event Bubbling"" refer to in web browser event propagation?",An error that occurs when too many click events happen at once.,The process where an event triggered on a child element propagates upward through its parent elements in the DOM tree.,The animation effect when a button is clicked.,The asynchronous creation of new event loops in background threads.,B,EventDriven
+59,THEORETICAL,module6,"Which of the following is a well-known programming challenge often associated with heavily nested asynchronous, event-driven code?",Stack overflow caused by infinite loops of array sorting.,"""Callback Hell"" (or pyramid of doom), making code hard to read and maintain.",Total inability to use functions with parameters.,Mandatory requirement for static typing.,B,EventDriven
+60,THEORETICAL,module6,How does event-driven programming differ from traditional procedural programming regarding Control Flow?,"Procedural relies on explicit, step-by-step linear instructions, whereas event-driven relies on inversion of control where code reacts to asynchronous triggers.","Procedural code cannot run on computers, while event-driven code can.",Event-driven programming forbids the use of subroutines or functions.,There is no difference in control flow between the two.,A,EventDriven
+61,THEORETICAL,module7,"In procedural programming, a procedure or function is most closely related to which component in functional programming?",Class,Function,Object,Attribute,B,Procedural
+62,THEORETICAL,module7,"In object-oriented programming, what component is most closely associated with grouping data and behavior together?",Object,Loop,Variable,Condition,A,OOP
+63,THEORETICAL,module7,A variable in imperative programming is most closely related to which component used to hold a value in procedural programming?,Class,Variable,Method,Object,B,Imperative
+64,THEORETICAL,module7,"In object-oriented programming, a method is most closely related to what in procedural programming?",Attribute,Class,Procedure or function,Object,C,OOP
+65,THEORETICAL,module7,Which component in object-oriented programming is commonly used to represent data belonging to an object?,Attribute or field,Loop,Condition,Procedure,A,OOP
+66,THEORETICAL,module7,"In functional programming, a pure function is a function that ideally:",Changes global variables every time,Produces the same output for the same input without side effects,Always repeats a loop,Creates a new class,B,Functional
+67,THEORETICAL,module7,Which component in procedural programming is commonly used to make decisions?,Class,Object,Conditional statement,Attribute,C,Procedural
+68,THEORETICAL,module7,A class in object-oriented programming is most closely described as:,A blueprint for creating objects,A single variable,A loop that repeats instructions,A condition that checks a value,A,OOP
+69,THEORETICAL,module7,Which component in functional programming can be used to transform each element of a collection?,map,class,while,if,A,Functional
+70,THEORETICAL,module7,"In imperative programming, a sequence of instructions is most closely related to what in procedural programming?",An object,A step-by-step procedure,An attribute,An inheritance relationship,B,Procedural
+71,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int a = 5;
+    int b = 3;
+    printf(""%d"", a + b * 2);
+    return 0;
+}",11,16,10,8,A,Procedural
+72,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int x = 10;
+    int y = x++;
+    printf(""%d, %d"", x, y);
+    return 0;
+}","10, 10","11, 10","11, 11","10, 11",B,Procedural
+73,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int arr[] = {10, 20, 30, 40};
+    int *ptr = arr;
+    printf(""%d"", *(ptr + 2));
+    return 0;
+}",10,20,30,40,C,Procedural
+74,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int count = 0;
+    for (int i = 0; i < 5; i += 2) {
+        count += i;
+    }
+    printf(""%d"", count);
+    return 0;
+}",6,10,4,5,A,Procedural
+75,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int a = 12, b = 5;
+    printf(""%d"", a % b * 2);
+    return 0;
+}",4,2,0,12,A,Procedural
+76,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+void solve() {
+    static int x = 3;
+    x++;
+    printf(""%d "", x);
+}
+int main() {
+    solve();
+    solve();
+    return 0;
+}",4 4,4 5,3 4,5 5,B,Procedural
+77,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int x = 1;
+    if (x == 2)
+        printf(""Alpha "");
+    else if (x = 0)
+        printf(""Beta "");
+    else
+        printf(""Gamma "");
+    return 0;
+}",Alpha,Beta,Gamma,Compilation Error,C,Procedural
+78,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    char str[] = ""Code"";
+    printf(""%c"", *(str + 2));
+    return 0;
+}",C,o,d,e,C,Procedural
+79,PROGRAMMING,typea,"What is the output of this code?
+#include <stdio.h>
+int main() {
+    int a = 8, b = 3;
+    printf(""%d"", a >> 1);
+    return 0;
+}",16,4,2,8,B,Procedural
+80,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        String str = ""Java"";
+        str.concat("" SE"");
+        System.out.println(str);
+    }
+}",Java SE,Java,JavaSE,NullPointerException,B,OOP
+81,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5};
+        System.out.println(nums.length + nums[2]);
+    }
+}",7,8,9,6,B,OOP
+82,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        int a = 15;
+        int b = 4;
+        System.out.println(a / b + ""."" + (a % b));
+    }
+}",3.75,3.3,3.12,3.7,B,OOP
+83,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder(""Hello"");
+        sb.append("" World"");
+        System.out.println(sb.length());
+    }
+}",5,10,11,12,C,OOP
+84,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        int x = 5;
+        System.out.println(x > 2 ? x < 4 ? 10 : 20 : 30);
+    }
+}",10,20,30,Compilation Error,B,OOP
+85,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        int val = 0;
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= i; j++) {
+                val++;
+            }
+        }
+        System.out.println(val);
+    }
+}",3,6,9,5,B,OOP
+86,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        String a = ""hello"";
+        String b = new String(""hello"");
+        System.out.println((a == b) + "" "" + a.equals(b));
+    }
+}",true true,false false,false true,true false,C,OOP
+87,PROGRAMMING,typea,"What is the output of this code?
+public class Test {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30};
+        try {
+            System.out.println(arr[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.print(""Error "");
+        } finally {
+            System.out.print(""Done"");
+        }
+    }
+}",Error,Done,Error Done,ArrayIndexOutOfBoundsException,C,OOP
+88,PROGRAMMING,typea,"What is the output of this code?
+x = [1, 2, 3]
+y = x
+y.append(4)
+print(len(x))",3,4,1,Error,B,Imperative
+89,PROGRAMMING,typea,"What is the output of this code?
+nums = [1, 2, 3, 4, 5]
+print(nums[::-2])","[5, 3, 1]","[1, 3, 5]","[5, 4, 3]","[4, 2]",A,Imperative
+90,PROGRAMMING,typea,"What is the output of this code?
+data = {""a"": 1, ""b"": 2}
+print(data.get(""c"", 3) + data.get(""b"", 0))",5,3,2,KeyError,A,Imperative
+91,PROGRAMMING,typea,"What is the output of this code?
+def check(val=[]):
+    val.append(1)
+    return val
+check()
+print(check())",[1],"[1, 1]","[[1], [1]]",AttributeError,B,Imperative
+92,PROGRAMMING,typea,"What is the output of this code?
+func = lambda x: x * 2 if x > 2 else x + 2
+print(func(3))",6,5,4,3,A,Imperative
+93,PROGRAMMING,typea,"What is the output of this code?
+let a = ""5"";
+let b = 2;
+console.log(a + b - b);",5,50,52,,B,EventDriven
+94,PROGRAMMING,typea,"What is the output of this code?
+const nums = [10, 20, 30];
+const [x, , y] = nums;
+console.log(x + y);",30,40,50,,B,EventDriven
+95,PROGRAMMING,typea,"What is the output of this code?
+const arr = [1, 2, 3];
+const result = arr.map(x => x * 2).filter(x => x > 3);
+console.log(result);","[2, 4, 6]","[4, 6]","[2, 3]",[6],B,EventDriven
+96,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 7,"int x = 5;
+printf(""%d"", x + 2);","int x = 5;
+printf(""%d"", x + 3);","int x = 5;
+printf(""%d"", x - 2);","int x = 5;
+printf(""%d"", x * 2);",B,Procedural
+97,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 2 4 6 8,"for (int i = 1; i < 4; i++)
+    printf(""%d "", i * 2);","for (int i = 1; i <= 4; i++)
+    printf(""%d "", i * 2);","for (int i = 1; i <= 4; i++)
+    printf(""%d "", i + 2);","for (int i = 2; i <= 8; i++)
+    printf(""%d "", i);",B,Procedural
+98,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 3,"int a = 10, b = 3;
+printf(""%d"", a % b);","int a = 10, b = 3;
+printf(""%d"", a / b);","int a = 10, b = 3;
+printf(""%d"", b / a);","int a = 10, b = 3;
+printf(""%d"", a - b);",B,Procedural
+99,PROGRAMMING,typeb,Which of the following code snippets will produce the output: Odd,"int x = 8;
+if (x % 2 == 0) printf(""Odd""); else printf(""Even"");","int x = 7;
+if (x % 2 == 0) printf(""Even""); else printf(""Odd"");","int x = 7;
+if (x % 2 != 0) printf(""Even""); else printf(""Odd"");","int x = 9;
+if (x % 2 == 0) printf(""Even""); else printf(""Even"");",B,Procedural
+100,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 8,"int x = 2;
+printf(""%d"", x * x);","int x = 2;
+printf(""%d"", x + 6);","int x = 2;
+printf(""%d"", x * x + 3);","int x = 2;
+printf(""%d"", x * 4);",D,Procedural
+101,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 10 8 6,"int x = 10;
+while (x > 6) { printf(""%d "", x); x -= 2; }","int x = 10;
+while (x >= 6) { printf(""%d "", x); x -= 2; }","int x = 10;
+while (x > 4) { printf(""%d "", x); x -= 2; }","int x = 10;
+while (x > 6) { x -= 2; printf(""%d "", x); }",B,Procedural
+102,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 4,"int arr[] = {2, 4, 6};
+printf(""%d"", arr[0]);","int arr[] = {2, 4, 6};
+printf(""%d"", arr[1]);","int arr[] = {2, 4, 6};
+printf(""%d"", arr[2]);","int arr[] = {2, 4, 6};
+printf(""%d"", arr[3]);",B,Procedural
+103,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 5,"void change(int *x) { *x = 20; }
+int main() { int x = 5; change(&x); printf(""%d"", x); }","void change(int x) { x = 20; }
+int main() { int x = 5; change(x); printf(""%d"", x); }","int x = 20;
+printf(""%d"", x);","int x = 5;
+x = 20;
+printf(""%d"", x);",B,Procedural
+104,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 15,"int x = 5;
+System.out.println(x + 10);","int x = 5;
+System.out.println(x * 10);","int x = 5;
+System.out.println(x + 5);","int x = 5;
+System.out.println(x - 10);",A,OOP
+105,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 1 2 3 4,"for (int i = 1; i < 4; i++) System.out.print(i + "" "");","for (int i = 1; i <= 4; i++) System.out.print(i + "" "");","for (int i = 0; i < 4; i++) System.out.print(i + "" "");","for (int i = 1; i <= 4; i++) System.out.print((i + 1) + "" "");",B,OOP
+106,PROGRAMMING,typeb,Which of the following code snippets will produce the output: Hello Java,"System.out.println(""Hello"" + ""Java"");","System.out.println(""Hello "" + ""Java"");","System.out.println(""Hello"" - ""Java"");","System.out.println(""Java "" + ""Hello"");",B,OOP
+107,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 25,"int x = 5;
+System.out.println(x * 5);","int x = 5;
+System.out.println(x + 5);","int x = 5;
+System.out.println(x * x + 5);","int x = 5;
+System.out.println(x * 2);",A,OOP
+108,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 10,"int x = 10;
+System.out.println(x++);","int x = 10;
+System.out.println(++x);","int x = 10;
+System.out.println(x + 1);","int x = 10;
+System.out.println(x--);",A,OOP
+109,PROGRAMMING,typeb,Which of the following code snippets will produce the output: Dog,"String animal = ""Cat"";
+System.out.println(animal);","String animal = ""Dog"";
+System.out.println(animal);","String animal = ""Dog"";
+System.out.println(""Cat"");","String animal = ""Cat"";
+System.out.println(""Dog"");",B,OOP
+110,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 6,"int[] numbers = {2, 4, 6};
+System.out.println(numbers[0]);","int[] numbers = {2, 4, 6};
+System.out.println(numbers[1]);","int[] numbers = {2, 4, 6};
+System.out.println(numbers[2]);","int[] numbers = {2, 4, 6};
+System.out.println(numbers.length);",C,OOP
+111,PROGRAMMING,typeb,Which of the following code snippets will produce the output: Meow,"class Animal { void sound() { System.out.println(""Woof""); } }
+Animal a = new Animal(); a.sound();","class Animal { void sound() { System.out.println(""Meow""); } }
+Animal a = new Animal(); a.sound();","class Animal { void sound() { System.out.println(""Bark""); } }
+Animal a = new Animal(); a.sound();","class Animal { void sound() { System.out.println(""Meow""); } }
+Animal a = new Animal(); System.out.println(""Woof"");",B,OOP
+112,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 20,"int x = 10; int y = 5;
+System.out.println(x + y);","int x = 10; int y = 5;
+System.out.println(x * y);","int x = 10; int y = 5;
+System.out.println(x - y);","int x = 10; int y = 5;
+System.out.println(x / y);",B,OOP
+113,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 16,"x = 4
+print(x * 4)","x = 4
+print(x ** 2)","x = 4
+print(x + 4)","x = 4
+print(x ** 3)",B,Imperative
+114,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 0 1 2 3,"for i in range(1, 4):
+    print(i, end="" "")","for i in range(4):
+    print(i, end="" "")","for i in range(0, 3):
+    print(i, end="" "")","for i in range(1, 5):
+    print(i, end="" "")",B,Imperative
+115,PROGRAMMING,typeb,Which of the following code snippets will produce the output: Hello World,"print(""Hello"" + ""World"")","print(""Hello"" + "" "" + ""World"")","print(""World"" + "" "" + ""Hello"")","print(""Hello"", ""World"", sep="""")",B,Imperative
+116,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 3,"numbers = [1, 2, 3, 4]
+print(numbers[2])","numbers = [1, 2, 3, 4]
+print(numbers[3])","numbers = [1, 2, 3, 4]
+print(len(numbers))","numbers = [1, 2, 3, 4]
+print(numbers[0])",A,Imperative
+117,PROGRAMMING,typeb,Which of the following code snippets will produce the output: True,"x = 10
+print(x < 5)","x = 10
+print(x == 5)","x = 10
+print(x > 5)","x = 10
+print(x != 10)",C,Imperative
+118,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 15,"let x = 10;
+console.log(x + 5);","let x = 10;
+console.log(x * 5);","let x = 10;
+console.log(x - 5);","let x = 10;
+console.log(x / 5);",A,EventDriven
+119,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 2 4 6,for (let i = 1; i <= 3; i++) { console.log(i); },for (let i = 1; i >= 3; i++) { console.log(i * 2); },for (let i = 2; i <= 6; i += 2) { console.log(i); },for (let i = 2; i < 6; i += 2) { console.log(i); },C,EventDriven
+120,PROGRAMMING,typeb,Which of the following code snippets will produce the output: 10,"let x = 5;
+console.log(x + 5);","let x = ""5"";
+console.log(x + 5);","let x = 5;
+console.log(x * 5);","let x = 5;
+console.log(x - 5);",A,EventDriven
+121,PROGRAMMING,typec,"What code should replace the blank to produce: 8
+#include <stdio.h>
+int main() {
+    int x = 5;
+    ______
+    return 0;
+}","printf(""%d"", x + 3);","printf(""%d"", x + 2);","printf(""%d"", x * 2);","printf(""%d"", x - 3);",A,Procedural
+122,PROGRAMMING,typec,"What code should replace the blank to produce: 1 2 3 4
+#include <stdio.h>
+int main() {
+    ______
+        printf(""%d "", i);
+    return 0;
+}",for (int i = 1; i < 4; i++),for (int i = 0; i < 4; i++),for (int i = 1; i <= 4; i++),for (int i = 1; i <= 5; i++),C,Procedural
+123,PROGRAMMING,typec,"What code should replace the blank to produce: 3
+#include <stdio.h>
+int main() {
+    int a = 10, b = 3;
+    ______
+    return 0;
+}","printf(""%d"", a / b);","printf(""%d"", a % b);","printf(""%d"", a - b);","printf(""%d"", b * 3);",A,Procedural
+124,PROGRAMMING,typec,"What code should replace the blank to produce: Even
+#include <stdio.h>
+int main() {
+    int x = 8;
+    ______ //missing line
+        printf(""Even"");
+    else
+        printf(""Odd"");
+    return 0;
+}",if (x % 2 != 0),if (x % 2 == 0),if (x / 2 == 0),if (x % 3 == 0),B,Procedural
+125,PROGRAMMING,typec,"What code should replace the blank to produce: 10
+#include <stdio.h>
+int main() {
+    int numbers[] = {2, 4, 6, 8};
+    ______
+    return 0;
+}","printf(""%d"", numbers[0] + numbers[1]);","printf(""%d"", numbers[1] + numbers[2]);","printf(""%d"", numbers[2] + numbers[3]);","printf(""%d"", numbers[0] + numbers[3]);",D,Procedural
+126,PROGRAMMING,typec,"What code should replace the blank to produce: 10 8 6
+#include <stdio.h>
+int main() {
+    int x = 10;
+    ______ {
+        printf(""%d "", x);
+        x -= 2;
+    }
+    return 0;
+}",while (x > 6),while (x >= 6),while (x < 6),while (x >= 10),B,Procedural
+127,PROGRAMMING,typec,"What code should replace the blank to produce: 5
+#include <stdio.h>
+void change(int n) {
+    n = n + 10;
+}
+int main() {
+    int x = 5;
+    ______
+    printf(""%d"", x);
+    return 0;
+}",change(x);,change(&x);,x = change(x);,change(10);,A,Procedural
+128,PROGRAMMING,typec,"What code should replace the blank to produce: 15
+#include <stdio.h>
+int add(int a, int b) {
+    ______
+}
+int main() {
+    printf(""%d"", add(7, 8));
+    return 0;
+}",return a - b;,return a * b;,return a + b;,return a / b;,C,Procedural
+129,PROGRAMMING,typec,"What code should replace the blank to produce: 15
+public class Main {
+    public static void main(String[] args) {
+        int x = 10;
+        int y = 5;
+        ______
+    }
+}",System.out.println(x - y);,System.out.println(x + y);,System.out.println(x * y);,System.out.println(x / y);,B,OOP
+130,PROGRAMMING,typec,"What code should replace the blank to produce: 1 2 3 4
+public class Main {
+    public static void main(String[] args) {
+        ______
+            System.out.print(i + "" "");
+    }
+}",for (int i = 0; i < 4; i++),for (int i = 1; i < 4; i++),for (int i = 1; i <= 4; i++),for (int i = 1; i <= 5; i++),C,OOP
+131,PROGRAMMING,typec,"What code should replace the blank to produce: Hello Java
+public class Main {
+    public static void main(String[] args) {
+        String a = ""Hello"";
+        String b = ""Java"";
+        ______
+    }
+}",System.out.println(a + b);,"System.out.println(a + "" "" + b);",System.out.println(a - b);,System.out.println(a * b);,B,OOP
+132,PROGRAMMING,typec,"What code should replace the blank to produce: 11
+public class Main {
+    public static void main(String[] args) {
+        int x = 10;
+        ______
+        System.out.println(x);
+    }
+}",x--;,x = x - 1;,x++;,x = x * 0;,C,OOP
+133,PROGRAMMING,typec,"What code should replace the blank to produce: 6
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {2, 4, 6, 8};
+        ______
+    }
+}",System.out.println(numbers[0]);,System.out.println(numbers[1]);,System.out.println(numbers[2]);,System.out.println(numbers[3]);,C,OOP
+134,PROGRAMMING,typec,"What code should replace the blank to produce: Meow
+class Animal {
+    void sound() { System.out.println(""Sound""); }
+}
+class Cat extends Animal {
+    void sound() { System.out.println(""Meow""); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Animal a = new Cat();
+        ______
+    }
+}",a.sound();,Cat.sound();,Animal.sound();,System.out.println(a);,A,OOP
+135,PROGRAMMING,typec,"What code should replace the blank to produce: 12
+public class Main {
+    static int multiply(int a, int b) {
+        ______
+    }
+    public static void main(String[] args) {
+        System.out.println(multiply(3, 4));
+    }
+}",return a + b;,return a - b;,return a * b;,return a / b;,C,OOP
+136,PROGRAMMING,typec,"What code should replace the blank to produce: Woof
+class Animal {
+    void sound() { System.out.println(""Sound""); }
+}
+class Dog extends Animal {
+    void sound() { System.out.println(""Woof""); }
+}
+public class Main {
+    public static void main(String[] args) {
+        ______
+        a.sound();
+    }
+}",Animal a = new Animal();,Dog a = new Animal();,Animal a = new Dog();,Animal.sound();,C,OOP
+137,PROGRAMMING,typec,"What code should replace the blank to produce: 16
+x = 4
+______",print(x + 4),print(x * 4),print(x - 4),print(x / 4),B,Imperative
+138,PROGRAMMING,typec,"What code should replace the blank to produce: 0 1 2 3
+______
+    print(i, end="" "")","for i in range(1, 4):",for i in range(4):,"for i in range(1, 5):","for i in range(0, 5):",B,Imperative
+139,PROGRAMMING,typec,"What code should replace the blank to produce: Hello World
+a = ""Hello""
+b = ""World""
+______",print(a + b),"print(a + "" "" + b)",print(a - b),print(a * b),B,Imperative
+140,PROGRAMMING,typec,"What code should replace the blank to produce: 3
+numbers = [1, 2, 3, 4]
+______",print(numbers[0]),print(numbers[1]),print(numbers[2]),print(numbers[3]),C,Imperative
+141,PROGRAMMING,typec,"What code should replace the blank to produce: 25
+def square(n):
+    ______
+print(square(5))",return n + n,return n * n,return n - n,return n / n,B,Imperative
+142,PROGRAMMING,typec,"What code should replace the blank to produce: 10
+let x = 6;
+let y = 4;
+______",console.log(x - y);,console.log(x + y);,console.log(x * y);,console.log(x / y);,B,EventDriven
+143,PROGRAMMING,typec,"What code should replace the blank to produce: 1 2 3
+______
+    console.log(i);",for (let i = 0; i < 3; i++),for (let i = 1; i < 3; i++),for (let i = 1; i <= 3; i++),for (let i = 1; i <= 4; i++),C,EventDriven
+144,PROGRAMMING,typec,"What code should replace the blank to produce: Hello JavaScript
+let a = ""Hello"";
+let b = ""JavaScript"";
+______",console.log(a + b);,"console.log(a + "" "" + b);",console.log(a - b);,console.log(a * b);,B,EventDriven
+145,PROGRAMMING,typec,"What code should replace the blank to produce: 9
+function square(n) {
+    ______
+}
+console.log(square(3));",return n + n;,return n - n;,return n * n;,return n / n;,C,EventDriven
