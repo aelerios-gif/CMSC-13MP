@@ -9,5 +9,7 @@ Fix to this, delete the classes using del *.class and recompiled for reboot.
 
 BUG: 'Pag napipindot yung Settings and Exit in Full screen sa Home Panel, nawawala yung window.
 
-
-
+Therese<11/6/2026>-Added AudioLoader class, allowing them to be called from other classes, also grouped the sounds
+    -SettingsDialog.java must call AudioLoader's setters para maadjust an volume
+    -added 3 sample clips since wala pa test audio file and bangin may possible changes pa
+    -added .gitignore so that it doesn't mind the classes, and we won't need to delete/recreate classes
