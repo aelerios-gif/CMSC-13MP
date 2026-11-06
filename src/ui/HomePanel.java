@@ -19,7 +19,6 @@ public class HomePanel extends JPanel
     {
 
         this.frame = frame;
-        audio.AudioLoader.playMainGameBG();
         backgroundImage = new ImageIcon("resources/images/HomeScreen.png").getImage();
 
         setLayout(new BorderLayout());

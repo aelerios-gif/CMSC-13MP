@@ -12,6 +12,10 @@ import model.Question;
 import util.GameFonts;
 import audio.AudioLoader;
 
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.KeyStroke;
+
 public class GamePanel extends JPanel 
 {
 
@@ -41,6 +45,9 @@ public class GamePanel extends JPanel
 
     private GameButton[] answerButtons;
 
+    private JPanel answerPanel;
+    private JScrollPane answerScrollPane;
+
     private GameButton nextButton;
 
     private GameButton friendButton;
@@ -56,7 +63,7 @@ public class GamePanel extends JPanel
 
     public GamePanel(GameFrame frame) 
     {
-        audio.AudioLoader.playProgrammingMusic();
+        
         this.frame = frame;
 
         backgroundImage = new ImageIcon("resources/images/GameplayBackground.png").getImage();
@@ -66,6 +73,8 @@ public class GamePanel extends JPanel
         createGUI();
 
         resetGame();
+
+        setupDebugShortcuts();
     }
 
 
@@ -230,33 +239,53 @@ public class GamePanel extends JPanel
 
 
         //answers
-        JPanel answerPanel = new JPanel(new GridLayout(2, 2, 15, 15));
+        answerPanel = new JPanel();
+        answerPanel.setLayout(new BoxLayout(answerPanel, BoxLayout.Y_AXIS));
         answerPanel.setOpaque(false);
 
         answerButtons = new GameButton[4];
 
-        for (int i = 0; i < 4; i++) 
+        for(int i = 0; i < 4; i++)
         {
-
             answerButtons[i] = new GameButton();
-
             answerButtons[i].setFont(GameFonts.button());
+
+            // Allow the button to expand horizontally.
+            answerButtons[i].setMinimumSize(new Dimension(0, 55));
+            answerButtons[i].setAlignmentX(Component.LEFT_ALIGNMENT);
 
             final int answerIndex = i;
 
             answerButtons[i].addActionListener(e -> {
-
                 checkAnswer(answerIndex);
-
             });
 
-            answerPanel.add(
-                answerButtons[i]
-            );
+            answerPanel.add(answerButtons[i]);
+
+            if (i < 3)
+            {
+                answerPanel.add(Box.createVerticalStrut(10));
+            }
         }
 
+        answerScrollPane = new JScrollPane(answerPanel);
+        answerScrollPane.setBorder(null);
+        answerScrollPane.setOpaque(false);
+        answerScrollPane.getViewport().setOpaque(false);
+
+        answerScrollPane.setHorizontalScrollBarPolicy(
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER
+        );
+
+        answerScrollPane.setVerticalScrollBarPolicy(
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED
+        );
+
+        //reserve space for the choices while keeping the question visible
+        answerScrollPane.setPreferredSize(new Dimension(700, 190));
+
         centerPanel.add(
-            answerPanel,
+            answerScrollPane,
             BorderLayout.SOUTH
         );
 
@@ -353,7 +382,7 @@ public class GamePanel extends JPanel
     // ==========================
 
     public void resetGame() {
-        AudioLoader.playProgrammingMusic();
+        AudioLoader.playMainGameBG();
         questions = new ArrayList<>();
 
         ArrayList<Question> module1Questions = QuestionBank.getModule1Questions();
@@ -474,14 +503,6 @@ public class GamePanel extends JPanel
             "Score: " + score
         );
 
-        /* String formattedQuestion = question.getQuestion()
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-            //.replace(" ", "&nbsp;")
-            .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
-            .replace("\n", "<br>"); */
-
         String formattedQuestion = question.getQuestion()
         .replace("\t", "    ");
 
@@ -489,26 +510,20 @@ public class GamePanel extends JPanel
 
         questionTextArea.setCaretPosition(0);
 
-        //test remove later if it doesnt work
-        //int textWidth = Math.max(100, questionLabel.getWidth() - 40);
-
-        /* questionLabel.setText(
-            "<html><div style='width: " + textWidth + "px; text-align: left;'>"
-            + formattedQuestion
-            + "</div></html>"
-        ); */
-
-
-
-        /* questionLabel.setText(
-            "<html><div style='text-align: left;'>"
-            + formattedQuestion
-            + "</div></html>"); */
-
 
 
         String[] choices =
             question.getChoices();
+
+        
+        int answerWidth = answerScrollPane.getViewport().getWidth();
+
+        if(answerWidth <= 0)
+        {
+            answerWidth = 700;
+        }
+
+        answerWidth = Math.max(300, answerWidth - 40);
 
         for(int i = 0; i < 4; i++)
         {
@@ -516,22 +531,40 @@ public class GamePanel extends JPanel
                 .replace("&", "&amp;")
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
-                .replace(" ", "&nbsp;")
-                .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
+                .replace("\t", "    ")
                 .replace("\n", "<br>");
 
+            int buttonHeight = calculateAnswerHeight(
+                choices[i],
+                answerWidth - 40,
+                answerButtons[i].getFont()
+            );
+
             answerButtons[i].setText(
-                "<html><div style='width: 350px; text-align: left;'>"
-                + (char)('A' + i)
+                "<html><div style='width: " + (answerWidth - 40)
+                + "px; text-align: left;'>"
+                + (char) ('A' + i)
                 + ". "
                 + formattedChoice
                 + "</div></html>"
-            );  
+            );
 
             answerButtons[i].setHorizontalAlignment(SwingConstants.LEFT);
 
+            answerButtons[i].setPreferredSize(
+                new Dimension(answerWidth, buttonHeight)
+            );
+
+            answerButtons[i].setMaximumSize(
+                new Dimension(Integer.MAX_VALUE, buttonHeight)
+            );
+
             answerButtons[i].setEnabled(true);
         }
+
+        answerPanel.revalidate();
+        answerPanel.repaint();
+        answerScrollPane.revalidate();
 
         nextButton.setEnabled(false);
 
@@ -636,7 +669,7 @@ public class GamePanel extends JPanel
                 + "Better luck next time!"
             );
 
-            showFinalScore();
+            showFinalScore(false);
 
             return;
         }
@@ -752,6 +785,8 @@ public class GamePanel extends JPanel
         //dialog after module 7
         if(currentQuestion == 70)
         {
+            AudioLoader.playProgrammingMusic();
+
             resetFriendCalls();
 
             showRoundIntro(
@@ -787,7 +822,7 @@ public class GamePanel extends JPanel
         //dialog after all questions
         if(currentQuestion >= questions.size())
         {
-            showFinalScore();
+            showFinalScore(true);
 
             return;
         }
@@ -986,32 +1021,27 @@ public class GamePanel extends JPanel
     // FINAL SCORE
     // ==========================
 
-    private void showFinalScore() {
+    private void showFinalScore(boolean won) {
 
-        double percentage =
-            ((double) score / questions.size())
-            * 100;
+        double percentage = ((double) score / questions.size()) * 100;
 
-        String message =
-            "GAME OVER!\n\n"
-            + "Your Score: "
-            + score
-            + " / "
-            + questions.size()
-            + "\n\n"
-            + String.format(
-                "Percentage: %.1f%%",
-                percentage
-            );
+        String message = (won ? "YOU WIN!\n\n" : "GAME OVER!\n\n")
+        + "Your score: "
+        + score
+        + " / "
+        + questions.size()
+        + "\n\n"
+        + String.format(
+            "Percentage: %1.1f%%",
+            percentage
+        );
 
         JOptionPane.showMessageDialog(
-            this,
-            message,
-            "Final Score",
+            this, message, "Final Score",
             JOptionPane.INFORMATION_MESSAGE
         );
 
-        frame.returnToHome();
+        frame.showEndingScreen(won);
     }
 
     private void showRoundIntro(String message, int nextSectionIndex)
@@ -1041,5 +1071,92 @@ public class GamePanel extends JPanel
     public boolean hasCalledFriend(Friend friend)
     {
         return calledFriendsThisRound.contains(friend);
+    }
+
+    private int calculateAnswerHeight(String text, int availableWidth, Font font)
+    {
+        FontMetrics metrics = getFontMetrics(font);
+
+        int lineCount = 0;
+
+        String[] paragraphs = text.split("\n", -1);
+
+        for(String paragraph : paragraphs)
+        {
+            if(paragraph.isEmpty())
+            {
+                lineCount++;
+                continue;
+            }
+
+            int currentLineWidth = 0;
+            String[] words = paragraph.split("\\s+");
+
+            for(String word : words)
+            {
+                int wordWidth = metrics.stringWidth(word);
+                int spaceWidth = metrics.stringWidth(" ");
+
+                if(currentLineWidth > 0 && currentLineWidth + spaceWidth + wordWidth > availableWidth)
+                {
+                    lineCount++;
+                    currentLineWidth = wordWidth;
+                }
+                else
+                {
+                    if(currentLineWidth > 0)
+                    {
+                        currentLineWidth += spaceWidth;
+                    }
+
+                    currentLineWidth += wordWidth;
+                }
+            }
+
+            lineCount++;
+        }
+
+        return Math.max(55, lineCount * metrics.getHeight() + 28);
+    }
+
+    private void setupDebugShortcuts()
+    {
+        getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+            KeyStroke.getKeyStroke(KeyEvent.VK_F9, 0),
+            "skipStage"
+        );
+
+        getActionMap().put("skipStage", new AbstractAction()
+        {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e)
+            {
+                skipCurrentStage();
+            }
+        });
+    }
+
+    private void skipCurrentStage()
+    {
+        if(questions.isEmpty() || currentQuestion >= questions.size())
+        {
+            return;
+        }
+
+        int[] stageBoundaries = {
+            10, 20, 30, 40, 50, 60, 70, 95, 120, questions.size()
+        };
+
+        for(int boundary : stageBoundaries)
+        {
+            if(boundary > currentQuestion)
+            {
+                currentQuestion = boundary - 1;
+
+                nextQuestion();
+
+                return;
+            }
+        }
     }
 }

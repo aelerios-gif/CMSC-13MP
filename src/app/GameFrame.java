@@ -6,6 +6,8 @@ import ui.GamePanel;
 import ui.HomePanel;
 import ui.SplashPanel;
 import ui.TutorialPanel;
+import ui.EndingPanel;
+import audio.AudioLoader;
 
 public class GameFrame extends JFrame 
 {
@@ -14,6 +16,8 @@ public class GameFrame extends JFrame
     private JPanel mainPanel;
 
     private GamePanel gamePanel;
+
+    private EndingPanel endingPanel;
 
     private boolean fullscreen = false;
 
@@ -43,11 +47,14 @@ public class GameFrame extends JFrame
 
         gamePanel = new GamePanel(this);
 
+        endingPanel = new EndingPanel(this);
+
         // Add screens
         mainPanel.add(splashPanel, "SPLASH");
         mainPanel.add(homePanel, "HOME");
         mainPanel.add(tutorialPanel, "TUTORIAL");
         mainPanel.add(gamePanel, "GAME");
+        mainPanel.add(endingPanel, "ENDING");
 
         add(mainPanel);
 
@@ -72,11 +79,15 @@ public class GameFrame extends JFrame
 
     public void returnToHome() 
     {
+        AudioLoader.playMainGameBG();
+
         showScreen("HOME");
     }
 
     public void showHome()
     {
+        AudioLoader.playMainGameBG();
+
         cardLayout.show(mainPanel, "HOME");
     }
 
@@ -132,5 +143,11 @@ public class GameFrame extends JFrame
 
             fullscreen = false;
         }
+    }
+
+    public void showEndingScreen(boolean won)
+    {
+        endingPanel.showEnding(won);
+        showScreen("ENDING");
     }
 }
