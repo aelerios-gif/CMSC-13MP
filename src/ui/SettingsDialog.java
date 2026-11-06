@@ -4,6 +4,7 @@ import app.GameFrame;
 import java.awt.*;
 import javax.swing.*;
 import util.GameFonts;
+import audio.AudioLoader;
 
 public class SettingsDialog extends JDialog
 {
@@ -78,10 +79,12 @@ public class SettingsDialog extends JDialog
         //Save the selected volume levels
         soundEffectsSlider.addChangeListener(e -> {
             soundEffectsVolume = soundEffectsSlider.getValue();
+            audio.AudioLoader.setSFXVolume(soundEffectsVolume);
         });
 
         gameMusicSlider.addChangeListener(e -> {
             gameMusicVolume = gameMusicSlider.getValue();
+            audio.AudioLoader.setBGMVolume(gameMusicVolume);
         });
     }
 

@@ -13,3 +13,11 @@ Therese<11/6/2026>-Added AudioLoader class, allowing them to be called from othe
     -SettingsDialog.java must call AudioLoader's setters para maadjust an volume
     -added 3 sample clips since wala pa test audio file and bangin may possible changes pa
     -added .gitignore so that it doesn't mind the classes, and we won't need to delete/recreate classes
+
+Therese<11/6/2026>-Modified AudioLoader: Converted all audio files (mp3) to .wav file,
+Called audioloader in the ff. classes:
+-GameButton.java for click.wav
+-HomePanel.java and SplashPanel.java for main game bgm
+-GamePanel.java for prog questions bgm
+
+Modified SettingsDialog.java to implement change of volume

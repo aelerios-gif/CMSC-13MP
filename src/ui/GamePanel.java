@@ -10,6 +10,7 @@ import model.Friend;
 import model.FriendRoster;
 import model.Question;
 import util.GameFonts;
+import audio.AudioLoader;
 
 public class GamePanel extends JPanel 
 {
@@ -55,7 +56,7 @@ public class GamePanel extends JPanel
 
     public GamePanel(GameFrame frame) 
     {
-
+        audio.AudioLoader.playProgrammingMusic();
         this.frame = frame;
 
         backgroundImage = new ImageIcon("resources/images/GameplayBackground.png").getImage();
@@ -352,7 +353,7 @@ public class GamePanel extends JPanel
     // ==========================
 
     public void resetGame() {
-
+        AudioLoader.playProgrammingMusic();
         questions = new ArrayList<>();
 
         ArrayList<Question> module1Questions = QuestionBank.getModule1Questions();
@@ -565,7 +566,8 @@ public class GamePanel extends JPanel
 
         //check the players answer
         if(selectedAnswer == correctAnswer)
-        {
+        {   
+            AudioLoader.playCorrectAnswer();
             score++;
             consecutiveCorrect++;
 
@@ -606,7 +608,7 @@ public class GamePanel extends JPanel
         {
             //wrong answer costs one heart
             lives--;
-
+            AudioLoader.playWrongAnswer();
             //reset the consecutive correct answers
             consecutiveCorrect = 0;
 
@@ -626,7 +628,8 @@ public class GamePanel extends JPanel
 
         //Check if the player has lost all hearts
         if(lives <= 0)
-        {
+        {   
+            AudioLoader.playGameOver();
             JOptionPane.showMessageDialog(
                 this,
                 "You have run out of hearts!\n"

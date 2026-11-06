@@ -1,4 +1,3 @@
-
 package ui;
 
 import java.awt.Color;
@@ -8,19 +7,15 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import util.GameFonts;
+import audio.AudioLoader;
 
 public class GameButton extends JButton
 {
     private int cornerRadius = 15;
-
-    private boolean hovered = false;
-    private boolean pressed = false;
 
     public GameButton(String text)
     {
@@ -41,39 +36,9 @@ public class GameButton extends JButton
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mouseEntered(MouseEvent e)
-            {
-                hovered = true;
-                repaint();
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e)
-            {
-                hovered = false;
-                pressed = false;
-                repaint();
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e)
-            {
-                if (isEnabled())
-                {
-                    pressed = true;
-                    repaint();
-                }
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e)
-            {
-                pressed = false;
-                repaint();
-            }
+        // Automatically play click sound whenever any GameButton is successfully clicked
+        addActionListener(e -> {
+            AudioLoader.playClick();
         });
     }
 
@@ -98,17 +63,20 @@ public class GameButton extends JButton
             RenderingHints.VALUE_ANTIALIAS_ON
         );
 
+        boolean isHovered = getModel().isRollover();
+        boolean isPressed = getModel().isPressed();
+
         Color background;
 
         if (!isEnabled())
         {
             background = new Color(45, 60, 48);
         }
-        else if (pressed)
+        else if (isPressed)
         {
             background = new Color(12, 95, 42);
         }
-        else if (hovered)
+        else if (isHovered)
         {
             background = GameFonts.NEON_GREEN;
         }
@@ -129,7 +97,7 @@ public class GameButton extends JButton
 
         g2.dispose();
 
-        if (hovered && !pressed && isEnabled())
+        if (isHovered && !isPressed && isEnabled())
         {
             setForeground(GameFonts.BACKGROUND);
         }
@@ -155,7 +123,9 @@ public class GameButton extends JButton
             RenderingHints.VALUE_ANTIALIAS_ON
         );
 
-        if (hovered && isEnabled())
+        boolean isHovered = getModel().isRollover();
+
+        if (isHovered && isEnabled())
         {
             g2.setColor(GameFonts.MINT_GREEN);
         }

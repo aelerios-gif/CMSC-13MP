@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
+import audio.AudioLoader;
 
 public class SplashPanel extends JPanel
 {
@@ -23,7 +24,7 @@ public class SplashPanel extends JPanel
     public SplashPanel(GameFrame frame)
     {
         this.frame = frame;
-
+        audio.AudioLoader.playMainGameBG();
         //load all 7 splash screen images
         splashImages = new Image[7];
 

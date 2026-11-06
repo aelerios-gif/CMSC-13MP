@@ -6,6 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
 import util.GameFonts;
+import audio.AudioLoader;
 
 public class HomePanel extends JPanel 
 {
@@ -18,7 +19,7 @@ public class HomePanel extends JPanel
     {
 
         this.frame = frame;
-
+        audio.AudioLoader.playMainGameBG();
         backgroundImage = new ImageIcon("resources/images/HomeScreen.png").getImage();
 
         setLayout(new BorderLayout());
