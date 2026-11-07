@@ -15,9 +15,12 @@ Therese<11/6/2026>-Added AudioLoader class, allowing them to be called from othe
     -added .gitignore so that it doesn't mind the classes, and we won't need to delete/recreate classes
 
 Therese<11/6/2026>-Modified AudioLoader: Converted all audio files (mp3) to .wav file,
+Modified SettingsDialog.java to implement change of volume
 Called audioloader in the ff. classes:
 -GameButton.java for click.wav
 -HomePanel.java and SplashPanel.java for main game bgm
--GamePanel.java for prog questions bgm
+-GamePanel.java for prog questions bgm, CorrectAnswer, WrongAnswer, and GameOver
+! WrongAnswer has low volume by itself, but I thiink it's okay
 
-Modified SettingsDialog.java to implement change of volume
+
+Therese<11/07/2026>-Added exe file, InnoPackage and changed readme file. Check ReadMe file for gam details and set-up.
