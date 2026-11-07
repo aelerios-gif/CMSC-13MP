@@ -1,8 +1,10 @@
 package ui;
 
 import app.GameFrame;
+import audio.AudioLoader;
 import data.QuestionBank;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.*;
@@ -10,11 +12,6 @@ import model.Friend;
 import model.FriendRoster;
 import model.Question;
 import util.GameFonts;
-import audio.AudioLoader;
-
-import java.awt.event.KeyEvent;
-import javax.swing.AbstractAction;
-import javax.swing.KeyStroke;
 
 public class GamePanel extends JPanel 
 {
@@ -681,25 +678,7 @@ public class GamePanel extends JPanel
 
     private void updateLivesDisplay()
     {
-        StringBuilder hearts = new StringBuilder("<html>");
-
-        for(int i = 0; i < 5; i++)
-        {
-            if(i < lives)
-            {
-                hearts.append("<font color='#FF3333' size='8'>♥</font>");
-            }
-            else
-            {
-                hearts.append("<font color='#555555' size='8'>♡</font> ");
-            }
-
-            hearts.append("&nbsp;");
-        }
-
-        hearts.append("</html>");
-
-        livesLabel.setText(hearts.toString());
+        livesLabel.setText("   Lives: " + lives);
     }
 
     // ==========================
